@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="us-ascii" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<!-- ZONE INF RANGE FIX -->
+	<!-- Scannerpacks range boost now handled by upgraded weapons -->
+	<AttributeModifier
+		id="ZoneTrooper_ScannerPack"
+		Category="INNATE_VISION">
+		<Modifier
+			Type="RANGE"
+			Value="100%" />
+		<Modifier
+			Type="VISION"
+			Value="100%" />
+		<Modifier
+			Type="SHROUD_CLEARING"
+			Value="120%" />
+	</AttributeModifier>		
+
+	<AttributeModifier
+		id="AttributeModifier_JumpJetInTransit"
+		Category="NONE">
+		<Modifier Type="CRUSHABLE_LEVEL" Value="200%"/>
+	</AttributeModifier>		
+	
+	
+	<AttributeModifier
+		id="AttributeModifier_AdvancedArticulators_Disint"
+		Category="NONE">		
+		<Modifier Type="SPEED" Value="185%"/>
+	</AttributeModifier>
+	
+	
+</AssetDeclaration>

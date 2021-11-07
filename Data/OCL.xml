@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="us-ascii" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<!-- SHADOW SPAWN DELAY -->
+	<ObjectCreationList
+		id="OCL_SpecialPowerRedShadowStrikeTeam">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS DONT_SET_PRODUCER ISSUE_MOVE_AFTER_CREATION IGNORE_COMMANDPOINT_LIMIT FADE_IN"
+			Disposition="LIKE_EXISTING"
+			StartingBusyTime="5s"
+			InvulnerableTime="5s"
+			FadeTime="60s" 			
+			DisabledWhileBusy="true"				
+			UseUpgradedLocomotor="true">
+			<Offset
+				x="0"
+				y="0"
+				z="130"></Offset>
+			<CreateObject>NODShadowSquad_Veteran</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS DONT_SET_PRODUCER ISSUE_MOVE_AFTER_CREATION IGNORE_COMMANDPOINT_LIMIT FADE_IN"
+			Disposition="LIKE_EXISTING"
+			StartingBusyTime="5s"
+			InvulnerableTime="5s"
+			FadeTime="60s" 			
+			DisabledWhileBusy="true"				
+			UseUpgradedLocomotor="true">
+			<Offset
+				x="-20"
+				y="50"
+				z="130"></Offset>
+			<CreateObject>NODShadowSquad_Veteran</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<ObjectCreationList
+		id="OCL_SpecialPowerRedShadowStrikeTeamMOK">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS DONT_SET_PRODUCER ISSUE_MOVE_AFTER_CREATION IGNORE_COMMANDPOINT_LIMIT FADE_IN"
+			Disposition="LIKE_EXISTING"
+			StartingBusyTime="5s"
+			InvulnerableTime="5s"
+			FadeTime="60s" 			
+			DisabledWhileBusy="true"			
+			UseUpgradedLocomotor="true">
+			<Offset
+				x="0"
+				y="0"
+				z="130"></Offset>
+			<CreateObject>MarkedOfKaneShadowSquad_Veteran</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS DONT_SET_PRODUCER ISSUE_MOVE_AFTER_CREATION IGNORE_COMMANDPOINT_LIMIT FADE_IN"
+			Disposition="LIKE_EXISTING"
+			StartingBusyTime="5s"
+			InvulnerableTime="5s"
+			FadeTime="60s" 			
+			DisabledWhileBusy="true"			
+			UseUpgradedLocomotor="true">
+			<Offset
+				x="-20"
+				y="50"
+				z="130"></Offset>
+			<CreateObject>MarkedOfKaneShadowSquad_Veteran</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>		
+	
+	<!-- TVD FIX -->
+  <ObjectCreationList
+		id="OCL_NODVeinDetonation">
+    <CreateObject
+			Disposition="ON_GROUND_ALIGNED"
+			Options="IGNORE_ALL_OBJECTS"
+			CreateFX="FX_NOD_TiberiumVeinDetonation">
+      <Offset x="0" y="0" z="0"/>
+      <CreateObject>NODVeinDetonation</CreateObject>
+    </CreateObject>
+    <CreateObject
+			Disposition="ON_GROUND_ALIGNED"
+			Options="IGNORE_ALL_OBJECTS">
+      <Offset x="0" y="0" z="0"/>
+      <CreateObject>NODVeinDetonationFinal</CreateObject>
+    </CreateObject>	
+  </ObjectCreationList>		
+	
+	
+	<!-- OCL for friendly sensorpod -->
+	<ObjectCreationList
+		id="OCL_GDIOrcaSensorStickyPod_Ally">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED">
+			<CreateObject>GDIOrcaSensorStickyPod_Ally</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<!-- Cabal draft nerf -->		
+	<ObjectCreationList
+		id="OCL_GenericBlackHandBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			MinHordeDensity="67"
+			MaxHordeDensity="68">
+			<CreateObject>BlackHandConfessorSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+		
+</AssetDeclaration>

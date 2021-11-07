@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="us-ascii" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<!-- CLONE FILTER FIXES -->
+	<SpecialPowerTemplate
+		id="SpecialPowerCloneObjectSelect"
+		TargetType="LOCATION"
+		RadiusCursorRadius="100"
+		EvaEventToPlayWhenSelectingTarget="SelectUnit"
+		Flags="NEEDS_OBJECT_FILTER IS_PLAYER_POWER NOT_CLIFF_CELL SHARED_SYNC">
+		<ObjectFilter
+			Relationship="ALLIES"
+			Rule="ANY"
+			Include="INFANTRY VEHICLE"
+			Exclude="SUMMONED AIRCRAFT HUSK">
+			<ExcludeThing>AlienMCVUnpacking</ExcludeThing>
+			<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+			<ExcludeThing>Viceroid</ExcludeThing>
+			<ExcludeThing>NODShadowSquadBeacon</ExcludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>	
+
+	<!-- TVD FIX -->
+	<SpecialPowerTemplate
+		id="SpecialPowerTibVeinDetonation"
+		DisplayName="NAME:SpecialPowerTibVeinDetonation"
+		Description="DESC:SpecialPowerTibVeinDetonation"
+		Flags="IS_PLAYER_POWER IGNORE_MAP_EXTENTS SHARED_SYNC NEEDS_OBJECT_FILTER"
+		ReloadTime="420s"
+		TargetType="LOCATION"
+		InitiateAtLocationSound="Multisound:NOD_TiberiumVeinDetonationMS"
+		RadiusCursorRadius="250"
+		Money="-4000"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget" >
+
+		<ObjectFilter
+			Rule="ANY">
+			<IncludeThing>TiberiumField</IncludeThing>
+			<IncludeThing>TiberiumFieldBlue</IncludeThing>
+			<IncludeThing>TiberiumFieldRedZone</IncludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+
+	<!-- SENSOR POD SPECIALPOWERTEMPLATES -->
+	<!-- This dispatcher costs money so the tooltip works -->
+	<SpecialPowerTemplate
+		id="SpecialPowerSensorPod_Dispatch"
+		ReloadTime="1.5s"
+		TargetType="OBJECT_OR_LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0x5BED4CE3"
+		WaypointModeTerminal="false"
+		Flags="FOGGED_SHROUDED_CELLS_OK"
+		Money="-100">
+		<GameDependency>
+			<NeededUpgrade>Upgrade_OrcaSensorPod</NeededUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPowerSensorPod_UnTargeted"
+		ReloadTime="1.5s"		
+		TargetType="LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0x5BED4CE3"
+		Money="-100" />
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerSensorPod_Targeted"
+		ReloadTime="1.5s"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0x5BED4CE3" 
+		Flags="NEEDS_OBJECT_FILTER"
+		Money="-100">
+		<ObjectFilter 
+			Rule="ANY" 
+			Exclude="INFANTRY HORDE AIRCRAFT" 
+			Include="VEHICLE STRUCTURE TIBERIUM"
+			Relationship="ENEMIES" /> 
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPowerSensorPod_Targeted_Neutral"
+		ReloadTime="1.5s"		
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0x5BED4CE3" 
+		Flags="NEEDS_OBJECT_FILTER"
+		Money="-100">
+		<ObjectFilter 
+			Rule="ANY" 
+			Exclude="INFANTRY HORDE AIRCRAFT" 
+			Include="VEHICLE STRUCTURE TIBERIUM" 
+			Relationship="NEUTRAL" />
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPowerSensorPod_Targeted_Ally"
+		ReloadTime="1.5s"				
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0x5BED4CE3" 
+		Flags="NEEDS_OBJECT_FILTER"
+		Money="-100">
+		<ObjectFilter 
+			Rule="ANY" 
+			Exclude="INFANTRY HORDE AIRCRAFT" 
+			Include="VEHICLE STRUCTURE TIBERIUM" 
+			Relationship="ALLIES" />
+	</SpecialPowerTemplate>	
+	
+
+	
+<!-- ######################################################### -->
+	<SpecialPowerTemplate
+		id="SpecialPower_CultistMindControl"
+		TargetType="OBJECT"
+		InitiateSound="AudioEvent:ALI_Cultist_Manipulate"
+		ReloadTime="20s"
+		DisallowedTargetObjectStatus="UNATTACKABLE"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0x1D616110"
+		WaypointModeTerminal="false"
+		MaxCastRange="200"
+		Flags="NEEDS_OBJECT_FILTER"
+		PreventConditions="AIRBORNE_TARGET IGNORE_AI_COMMAND">
+		<ObjectFilter
+			Rule="ANY"
+			Relationship="ENEMIES NEUTRAL"
+			Include="VEHICLE INFANTRY"
+			Exclude="AIRCRAFT METAUNIT HUSK">
+			<ExcludeThing>SubwayNode</ExcludeThing>
+			<ExcludeThing>AlienMastermind</ExcludeThing>
+			<ExcludeThing>GDICommando</ExcludeThing>
+			<ExcludeThing>NODCommando</ExcludeThing>
+			<ExcludeThing>Viceroid</ExcludeThing>
+			<ExcludeThing>AlienWormHole</ExcludeThing>
+			<ExcludeThing>AlienMothership</ExcludeThing>
+			<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+			<ExcludeThing>Traveler59Cultist</ExcludeThing>
+			<ExcludeThing>Traveler59CultistSquad</ExcludeThing>
+			<ExcludeThing>BlackHandCommando</ExcludeThing>
+			<ExcludeThing>MarkedOfKaneCommando</ExcludeThing>
+			<ExcludeThing>ZOCOMCommando</ExcludeThing>
+			
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+			id="SpecialPower_CultistMindControlGetInRange"
+			TargetType="OBJECT"
+			InitiateSound="AudioEvent:ALI_Cultist_Manipulate"
+			ReloadTime="15s"
+			DisallowedTargetObjectStatus="UNATTACKABLE"
+			NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0x1D616110"
+			WaypointModeTerminal="false"
+			MaxCastRange="200"
+			Flags="NEEDS_OBJECT_FILTER"
+			PreventConditions="AIRBORNE_TARGET IGNORE_AI_COMMAND">
+			<ObjectFilter
+			  Rule="ANY"
+			  Relationship="ENEMIES NEUTRAL"
+			  Include="VEHICLE INFANTRY"
+			  Exclude="AIRCRAFT METAUNIT HUSK">
+				<ExcludeThing>SubwayNode</ExcludeThing>
+				<ExcludeThing>AlienMastermind</ExcludeThing>
+				<ExcludeThing>GDICommando</ExcludeThing>
+				<ExcludeThing>NODCommando</ExcludeThing>
+				<ExcludeThing>Viceroid</ExcludeThing>
+				<ExcludeThing>AlienWormHole</ExcludeThing>
+				<ExcludeThing>AlienMothership</ExcludeThing>
+				<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+				<ExcludeThing>Traveler59Cultist</ExcludeThing>
+				<ExcludeThing>Traveler59CultistSquad</ExcludeThing>
+				<ExcludeThing>BlackHandCommando</ExcludeThing>
+				<ExcludeThing>MarkedOfKaneCommando</ExcludeThing>
+				<ExcludeThing>ZOCOMCommando</ExcludeThing>
+			</ObjectFilter>
+	</SpecialPowerTemplate>	
+	
+	<!-- MM Teleport -->
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObjectSelect"
+		ReloadTime="20s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="50"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MaxCastRange="9999997"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE IGNORE_SELF_IN_NEEDED_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0xCA84DAC5"
+		WaypointModeTerminal="false"
+		DisallowedTargetModelStates="LOCOMOTOR_NORMAL_UPGRADED"		
+		DisallowedTargetObjectStatus="INSIDE_GARRISON OUT_OF_PHASE POWERED_DOWN_EMP">
+		<ObjectFilter
+			Relationship="ALLIES"
+			Rule="ANY"
+			Exclude="AIRCRAFT"
+			Include="INFANTRY VEHICLE">
+			<IncludeThing>AlienMCV</IncludeThing>
+			<IncludeThing>AlienMCVUnpacking</IncludeThing>
+			<IncludeThing>Traveler59MCV</IncludeThing>
+			<IncludeThing>Traveler59MCVUnpacking</IncludeThing>			
+			<IncludeThing>Reaper17MCV</IncludeThing>
+			<IncludeThing>Reaper17MCVUnpacking</IncludeThing>		
+			<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObject"
+		ReloadTime="20s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="50"
+		Flags="LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_OBJECTS"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MaxCastRange="9999999"
+		ForbiddenObjectRange="25"
+		WaypointModeTerminal="false">
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Include="STRUCTURE" />
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPowerProdigyTeleportObjectSelect"
+		ReloadTime="20s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="50"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MaxCastRange="9999999"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE IGNORE_SELF_IN_NEEDED_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0xCA84DAC5"
+		WaypointModeTerminal="false"
+		DisallowedTargetModelStates="LOCOMOTOR_NORMAL_UPGRADED"
+		DisallowedTargetObjectStatus="INSIDE_GARRISON OUT_OF_PHASE POWERED_DOWN_EMP">
+		<ObjectFilter
+			Relationship="ALLIES"
+			Rule="ANY"
+			Exclude="AIRCRAFT"
+			Include="INFANTRY VEHICLE">
+			<IncludeThing>AlienMCV</IncludeThing>
+			<IncludeThing>AlienMCVUnpacking</IncludeThing>
+			<IncludeThing>Traveler59MCV</IncludeThing>
+			<IncludeThing>Traveler59MCVUnpacking</IncludeThing>			
+			<IncludeThing>Reaper17MCV</IncludeThing>
+			<IncludeThing>Reaper17MCVUnpacking</IncludeThing>				
+			<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPowerProdigyTeleportObject"
+		ReloadTime="20s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="50"
+		Flags="LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_OBJECTS"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MaxCastRange="9999999"
+		ForbiddenObjectRange="25"
+		WaypointModeTerminal="false">
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Include="STRUCTURE" />
+	</SpecialPowerTemplate>
+
+
+	<SpecialPowerTemplate
+		id="SpecialPower_ManipulateObject"
+		TargetType="OBJECT"
+		InitiateSound="ALI_MasterMind_ManipulateStart"
+		ReloadTime="30s"
+		DisallowedTargetObjectStatus="UNATTACKABLE"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0x1D616110"
+		WaypointModeTerminal="false"
+		Flags="NEEDS_OBJECT_FILTER">
+		<ObjectFilter
+			Rule="ALL"
+			Relationship="ENEMIES NEUTRAL"
+			Exclude="HUSK CIVILIAN_BUILDING FS_BASE_DEFENSE METAUNIT SUPER_WEAPON BRIDGE BRIDGE_SEGMENT BRIDGE_ENDCAP BRIDGE_GATEHOUSE CRATE TIBERIUM TIBERIUM_FIELD CAN_TOPPLE SIMPLE_OBJECT_PROP OPTIMIZED_PROP WALL_HUB WALL_SEGMENT">
+			<ExcludeThing>SubwayNode</ExcludeThing>
+			<ExcludeThing>AlienMastermind</ExcludeThing>
+			<ExcludeThing>AlienBlinkMastermind</ExcludeThing>
+			<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+			<ExcludeThing>GDICommando</ExcludeThing>
+			<ExcludeThing>NODCommando</ExcludeThing>
+			<ExcludeThing>BlackHandCommando</ExcludeThing>
+			<ExcludeThing>ZOCOMCommando</ExcludeThing>
+			<ExcludeThing>MarkedOfKaneCommando</ExcludeThing>
+			<ExcludeThing>Viceroid</ExcludeThing>
+			<ExcludeThing>AlienWormHole</ExcludeThing>
+			<ExcludeThing>AlienMothership</ExcludeThing>
+			<ExcludeThing>Traveler59Cultist</ExcludeThing>
+			<ExcludeThing>Traveler59CultistSquad</ExcludeThing>
+			<ExcludeThing>ABTower</ExcludeThing>
+			<!-- removed base defence references, added FS_BASE_DEFENSE to exclude instead -->
+			<IncludeThing>GDIBattleBase</IncludeThing>
+			<IncludeThing>SteelTalonsBattleBase</IncludeThing>
+			<IncludeThing>ZOCOMBattleBase</IncludeThing>	
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+
+	<!-- NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateAreaMindControl" -->
+	<SpecialPowerTemplate
+		id="SpecialPower_AOEMindControl"
+		TargetType="LOCATION"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE NO_FORBIDDEN_MODEL_STATES"
+		InitiateSound="AudioEvent:ALI_MasterMind_ManipulateStart"
+		RadiusCursorRadius="50"
+		ReloadTime="30s"
+		MaxCastRange="400"
+		DisallowedTargetObjectStatus="IN_STASIS STEALTHED UNATTACKABLE"
+		DisallowedTargetModelStates="INVISIBLE_STEALTH"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0xA7C0FAF3"
+		WaypointModeTerminal="false" >
+		<ObjectFilter
+			Rule="ALL"
+			Relationship="ENEMIES NEUTRAL"
+			Exclude="HUSK CIVILIAN_BUILDING FS_BASE_DEFENSE METAUNIT AIRCRAFT STRUCTURE SUPER_WEAPON BRIDGE BRIDGE_SEGMENT BRIDGE_ENDCAP BRIDGE_GATEHOUSE CRATE TIBERIUM TIBERIUM_FIELD CAN_TOPPLE SIMPLE_OBJECT_PROP OPTIMIZED_PROP WALL_HUB WALL_SEGMENT">
+			<ExcludeThing>SubwayNode</ExcludeThing>
+			<ExcludeThing>AlienMastermind</ExcludeThing>
+			<ExcludeThing>BlackHandCommando</ExcludeThing>
+			<ExcludeThing>MarkedOfKaneCommando</ExcludeThing>
+			<ExcludeThing>ZOCOMCommando</ExcludeThing>
+			<ExcludeThing>GDICommando</ExcludeThing>
+			<ExcludeThing>NODCommando</ExcludeThing>
+			<ExcludeThing>Viceroid</ExcludeThing>
+			<ExcludeThing>AlienWormHole</ExcludeThing>
+			<ExcludeThing>AlienMothership</ExcludeThing>
+			<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+			<ExcludeThing>Traveler59Cultist</ExcludeThing>
+			<ExcludeThing>Traveler59CultistSquad</ExcludeThing>
+			<ExcludeThing>ABTower</ExcludeThing>		
+			<!-- removed base defence references, added FS_BASE_DEFENSE to exclude instead -->
+			<IncludeThing>GDIBattleBase</IncludeThing>
+			<IncludeThing>SteelTalonsBattleBase</IncludeThing>
+			<IncludeThing>ZOCOMBattleBase</IncludeThing>			
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+	
+<!-- ############################################################################################# -->	
+	
+	<!-- NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateSpotTargetBombard" -->
+	<SpecialPowerTemplate
+		id="SpecialPower_SpotBeaconBombard"
+		Flags="LIMIT_DISTANCE NEEDS_OBJECT_FILTER FIND_REACHABLE_TARGETS WATER_OK TARGET_NEEDS_OBJECT_STATUS"
+		RequiredTargetObjectStatus="CAN_SPOT_FOR_BOMBARD"
+		ReloadTime="20s"
+		RadiusCursorRadius="110"
+		TargetType="LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0x933DCB8B"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MinCastRange="300"
+		MaxCastRange="50000"
+		ReachableTargetsCircleDisplayRadius="400">
+		<ObjectFilter
+			Relationship="ALLIES"
+			Rule="ALL" />
+		<GameDependency>
+			<ObjectFilter
+				Relationship="ALLIES">
+				<IncludeThing>NODShadowSquadBeacon</IncludeThing>
+			</ObjectFilter>
+		</GameDependency>
+
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPower_PhaseField"
+		ReloadTime="180s"
+		TargetType="LOCATION"
+		Flags="NEEDS_OBJECT_FILTER IS_PLAYER_POWER WATER_OK TARGET_NEEDS_OBJECT_STATUS SHARED_SYNC"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RadiusCursorRadius="100"
+		DisallowedTargetObjectStatus="AIRBORNE_TARGET IN_STASIS"
+		Money="-1500">
+		<ObjectFilter
+			Relationship="ALLIES"
+			Rule="ANY"
+			Exclude="AIRCRAFT INFANTRY"
+			Include="VEHICLE">
+			<IncludeThing>AlienMCV</IncludeThing>
+			<IncludeThing>AlienMCVUnpacking</IncludeThing>
+			<IncludeThing>Reaper17MCV</IncludeThing>
+			<IncludeThing>Reaper17MCVUnpacking</IncludeThing>
+			<IncludeThing>Traveler59MCV</IncludeThing>
+			<IncludeThing>Traveler59MCVUnpacking</IncludeThing>			
+			<ExcludeThing>Viceroid</ExcludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>		
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_UseTiberiumAgitation"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0xDAA1CAFD"
+		Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="DOES_CONTAIN_TIBERIUM"
+		DisallowedTargetModelStates="USER_16"
+		ReloadTime="45s"
+		PreventConditions="AIRBORNE_TARGET IGNORE_AI_COMMAND">
+		<ObjectFilter
+			Rule="ANY"
+			Exclude="UNATTACKABLE"
+			Include="FS_MONEY_STORAGE TIBERIUM_BASED"
+			Relationship="ENEMIES NEUTRAL ALLIES">
+			<!-- Refineries -->
+			<IncludeThing>NODRefinery</IncludeThing>
+			<IncludeThing>BlackHandRefinery</IncludeThing>
+			<IncludeThing>MarkedOfKaneRefinery</IncludeThing>
+			<IncludeThing>GDIRefinery</IncludeThing>
+			<IncludeThing>SteelTalonsRefinery</IncludeThing>
+			<IncludeThing>ZOCOMRefinery</IncludeThing>
+			<IncludeThing>AlienTiberiumTower</IncludeThing>
+			<IncludeThing>Traveler59TiberiumTower</IncludeThing>
+			<IncludeThing>Reaper17TiberiumTower</IncludeThing>
+			<!-- Silos -->
+			<IncludeThing>GDITiberiumSilo</IncludeThing>
+			<IncludeThing>SteelTalonsTiberiumSilo</IncludeThing>
+			<IncludeThing>ZOCOMTiberiumSilo</IncludeThing>
+			<IncludeThing>NodTiberiumSilo</IncludeThing>
+			<IncludeThing>MarkedOfKaneTiberiumSilo</IncludeThing>
+			<IncludeThing>BlackHandTiberiumSilo</IncludeThing>
+			<IncludeThing>TiberiumSpike</IncludeThing>
+			<IncludeThing>TiberiumSilo</IncludeThing>
+			<!-- Harvs -->
+			<IncludeThing>NODHarvester</IncludeThing>
+			<IncludeThing>BlackHandHarvester</IncludeThing>
+			<IncludeThing>MarkedOfKaneHarvester</IncludeThing>
+			<IncludeThing>GDIHarvester</IncludeThing>
+			<IncludeThing>SteelTalonsHeavyHarvester</IncludeThing>
+			<IncludeThing>ZOCOMHarvester</IncludeThing>
+			<IncludeThing>AlienHarvester</IncludeThing>
+			<IncludeThing>Traveler59Harvester</IncludeThing>
+			<IncludeThing>Reaper17Harvester</IncludeThing>
+			<!-- Growth Accs -->
+			<IncludeThing>AlienSporePod</IncludeThing>
+			<IncludeThing>Traveler59SporePod</IncludeThing>
+			<IncludeThing>Reaper17GrowthStimulator</IncludeThing>
+			<!-- Units -->			
+			<IncludeThing>Reaper17AnnihilatorTripod</IncludeThing>			
+			<IncludeThing>AlienDevourerTank</IncludeThing>
+			<IncludeThing>Reaper17DevourerTank</IncludeThing>			
+			<IncludeThing>Reaper17Corrupter</IncludeThing>			
+			<IncludeThing>Traveler59Corrupter</IncludeThing>
+			<IncludeThing>AlienCorrupter</IncludeThing>	
+			<IncludeThing>MarkedOfKaneTiberiumTrooperSquad</IncludeThing>
+			<IncludeThing>MarkedOfKaneTiberiumTrooper</IncludeThing>
+			<!-- PPs -->
+			<IncludeThing>NodPowerPlant</IncludeThing>
+			<IncludeThing>BlackHandPowerPlant</IncludeThing>
+			<IncludeThing>MarkedOfKanePowerPlant</IncludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>		
+
+	<SpecialPowerTemplate
+		id="TiberiumAgitationGetInRange"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0xDAA1CAFD"
+		Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="DOES_CONTAIN_TIBERIUM"
+		DisallowedTargetModelStates="USER_16"
+		ReloadTime="45s"
+		PreventConditions="AIRBORNE_TARGET IGNORE_AI_COMMAND">
+		<ObjectFilter
+			Rule="ANY"
+			Exclude="UNATTACKABLE"
+			Include="FS_MONEY_STORAGE TIBERIUM_BASED"
+			Relationship="ENEMIES NEUTRAL ALLIES">
+			<!-- Refineries -->
+			<IncludeThing>NODRefinery</IncludeThing>
+			<IncludeThing>BlackHandRefinery</IncludeThing>
+			<IncludeThing>MarkedOfKaneRefinery</IncludeThing>
+			<IncludeThing>GDIRefinery</IncludeThing>
+			<IncludeThing>SteelTalonsRefinery</IncludeThing>
+			<IncludeThing>ZOCOMRefinery</IncludeThing>
+			<IncludeThing>AlienTiberiumTower</IncludeThing>
+			<IncludeThing>Traveler59TiberiumTower</IncludeThing>
+			<IncludeThing>Reaper17TiberiumTower</IncludeThing>
+			<!-- Silos -->
+			<IncludeThing>GDITiberiumSilo</IncludeThing>
+			<IncludeThing>SteelTalonsTiberiumSilo</IncludeThing>
+			<IncludeThing>ZOCOMTiberiumSilo</IncludeThing>
+			<IncludeThing>NodTiberiumSilo</IncludeThing>
+			<IncludeThing>MarkedOfKaneTiberiumSilo</IncludeThing>
+			<IncludeThing>BlackHandTiberiumSilo</IncludeThing>
+			<IncludeThing>TiberiumSpike</IncludeThing>
+			<IncludeThing>TiberiumSilo</IncludeThing>
+			<!-- Harvs -->
+			<IncludeThing>NODHarvester</IncludeThing>
+			<IncludeThing>BlackHandHarvester</IncludeThing>
+			<IncludeThing>MarkedOfKaneHarvester</IncludeThing>
+			<IncludeThing>GDIHarvester</IncludeThing>
+			<IncludeThing>SteelTalonsHeavyHarvester</IncludeThing>
+			<IncludeThing>ZOCOMHarvester</IncludeThing>
+			<IncludeThing>AlienHarvester</IncludeThing>
+			<IncludeThing>Traveler59Harvester</IncludeThing>
+			<IncludeThing>Reaper17Harvester</IncludeThing>
+			<!-- Growth Accs -->
+			<IncludeThing>AlienSporePod</IncludeThing>
+			<IncludeThing>Traveler59SporePod</IncludeThing>
+			<IncludeThing>Reaper17GrowthStimulator</IncludeThing>
+			<!-- Units -->
+			<IncludeThing>Reaper17AnnihilatorTripod</IncludeThing>				
+			<IncludeThing>AlienDevourerTank</IncludeThing>
+			<IncludeThing>Reaper17DevourerTank</IncludeThing>			
+			<IncludeThing>Reaper17Corrupter</IncludeThing>
+			<IncludeThing>Traveler59Corrupter</IncludeThing>
+			<IncludeThing>AlienCorrupter</IncludeThing>	
+			<IncludeThing>MarkedOfKaneTiberiumTrooperSquad</IncludeThing>
+			<IncludeThing>MarkedOfKaneTiberiumTrooper</IncludeThing>
+			<!-- PPs -->
+			<IncludeThing>NodPowerPlant</IncludeThing>
+			<IncludeThing>BlackHandPowerPlant</IncludeThing>
+			<IncludeThing>MarkedOfKanePowerPlant</IncludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>	
+	
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_TargetedRepairVehicle"
+		ReloadTime="0s"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0x2B62EF13"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE"
+		MaxCastRange="99999">
+		<ObjectFilter
+			Rule="ANY"
+			Include="VEHICLE HUSK AIRCRAFT HUGE_VEHICLE"
+			Exclude="INFANTRY STRUCTURE" />
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_TargetedRepairVehicleMRT"
+		ReloadTime="0s"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0x2B62EF13"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE"
+		MaxCastRange="99999">
+		<ObjectFilter
+			Rule="ANY"
+			Include="VEHICLE HUSK AIRCRAFT HUGE_VEHICLE STRUCTURE"
+			Exclude="INFANTRY" />
+	</SpecialPowerTemplate>	
+
+	<SpecialPowerTemplate
+		id="SpecialPower_RailgunAccelerator"
+		ReloadTime="60s"
+		TargetType="LOCATION"
+		InitiateAtLocationSound="Multisound:GDI_RailgunAccerlatorMS"
+		Flags="IS_PLAYER_POWER NEEDS_OBJECT_FILTER WATER_OK TARGET_NEEDS_OBJECT_STATUS SHARED_SYNC"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RadiusCursorRadius="200"
+		DisallowedTargetObjectStatus="IN_STASIS"
+		RequiredTargetObjectStatus="RIDER2"
+		Money="-500">
+		<ObjectFilter
+			Rule="ALL"
+			Relationship="ALLIES"
+			StatusBitFlags="RIDER2" >
+		</ObjectFilter>
+	</SpecialPowerTemplate>		
+	
+</AssetDeclaration>

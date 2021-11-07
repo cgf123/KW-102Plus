@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	
+	<LogicCommandSet
+		id="SteelTalonsRepairAPCCommandSet">
+		<Cmd>Command_RepairVehicleMRT</Cmd>
+		<Cmd>Command_SteelTalonsCallForTransportVehicle</Cmd>
+		<Cmd>Command_APCMinefield</Cmd>
+		<Cmd>Command_Evacuate</Cmd>		
+		<Cmd>Command_Stop</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>	
+
+	<LogicCommand
+		id="Command_RepairVehicleMRT"
+		Type="SPECIAL_POWER"
+		Options="">
+		<SpecialPower>SpecialPower_TargetedRepairVehicleMRT</SpecialPower>
+	</LogicCommand>	
+	
+	<!-- Remove fence bug -->
+	<LogicCommandSet
+		id="NODTechAssemblyPlantCommandSet">
+		<Cmd>Command_UpgradeNODEmpBurst</Cmd>
+		<Cmd>Command_UpgradeNODLaserCapacitor</Cmd>
+		<Cmd>Command_PurchaseUpgradeTibCoreMissiles</Cmd>
+		<Cmd>Command_Redemption</Cmd>
+	</LogicCommandSet>		
+	
+	<!-- For Rigs?? -->
+	<LogicCommand
+		id="Command_ConstructSteelTalonsRig"
+		Type="UNIT_BUILD"
+		Options="">
+		<Object>SteelTalonsRig</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		id="Command_ConstructZOCOMRig"
+		Type="UNIT_BUILD"
+		Options="">
+		<Object>ZOCOMRig</Object>
+	</LogicCommand>	
+		
+	<!-- CFT INSTA-EVAC BUTTON -->
+	<LogicCommandSet
+		id="GDIV35OxCommandSet">
+		<Cmd>Command_MoveToPositionAndEvacuate</Cmd>
+		<Cmd>Command_Evacuate</Cmd>		
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+
+	<LogicCommandSet
+		id="NODCarryallCommandSet">
+		<Cmd>Command_MoveToPositionAndEvacuate</Cmd>
+		<Cmd>Command_Evacuate</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>			
+	
+	<!-- T2 Command buttons ordering fix -->
+	<LogicCommandSet
+		id="SteelTalonsCommandPostCommandSet">
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_PurchaseUpgradeSTAPAmmo</Cmd>		
+		<Cmd>Command_PurchaseUpgradeOrcaSensorPod</Cmd>
+	</LogicCommandSet>
+
+	<LogicCommandSet
+		id="ZOCOMCommandPostCommandSet">
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDIAPAmmo</Cmd>		
+		<Cmd>Command_PurchaseUpgradeOrcaSensorPod</Cmd>
+		<Cmd>Command_UpgradeZoneRaiderScannerPack</Cmd>		
+	</LogicCommandSet>	
+
+  <!-- Rav member agitation command option changed from 'target_object' to 'target_pos' - seems to work better -->
+  <LogicCommand
+		Type="SPECIAL_POWER"
+    	Options="NEED_TARGET_POS"
+		id="Command_FireTiberiumAgitation">
+    <SpecialPower>SpecialPower_UseTiberiumAgitation</SpecialPower>
+  </LogicCommand>		
+ 
+	
+  <!-- ######################################################### GIVE EVERY UNIT ATTACK MOVE!! ########################################################## -->	
+
+	<LogicCommandSet
+		id="GenericCommandSet">
+		<Cmd>Command_Stop</Cmd>
+		<Cmd>Command_AttackMove</Cmd>		
+	</LogicCommandSet>  
+	<LogicCommandSet
+		id="EmptyCommandSet" >
+		<Cmd>Command_AttackMove</Cmd>				
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="GDIMCVCommandSet">
+		<Cmd>Command_UnPackGDIMCV</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="SteelTalonsMCVCommandSet">
+		<Cmd>Command_UnPackGDIMCV</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="ZOCOMMCVCommandSet">
+		<Cmd>Command_UnPackGDIMCV</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="NODMCVCommandSet">
+		<Cmd>Command_UnPackNODMCV</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="AlienMCVCommandSet">
+		<Cmd>Command_UnPackALIENMCV</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>	
+	<LogicCommandSet
+		id="Traveler59MCVCommandSet">
+		<Cmd>Command_UnPackALIENMCV</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="Reaper17MCVCommandSet">
+		<Cmd>Command_UnPackALIENMCV</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>	
+	
+	<LogicCommandSet
+		id="AlienHarvesterCommandSet">
+		<Cmd>Command_HarvesterReturnToExtractor</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>	
+	<LogicCommandSet
+	 id="Traveler59HarvesterCommandSet">
+		<Cmd>Command_HarvesterReturnToExtractor</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>	
+	
+	<LogicCommandSet
+		id="GDIEngineerCommandSet">
+		<Cmd>Command_GDICallForTransportInfantry</Cmd>
+		<Cmd>Command_CaptureBuilding</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>	
+	<LogicCommandSet
+	id="ZOCOMEngineerCommandSet">
+		<Cmd>Command_ZOCOMCallForTransportInfantry</Cmd>
+		<Cmd>Command_CaptureBuilding</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>	
+	<LogicCommandSet
+		id="AlienAssimilatorCommandSet">
+		<Cmd>Command_AttackMove</Cmd>
+		<Cmd>Command_CaptureBuilding</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>	
+	
+  
+  
+	<LogicCommandSet
+		id="GDISurveyorCommandSet">
+		<Cmd>Command_GDICallForTransportVehicle</Cmd>
+		<Cmd>Command_UnPackSurveyor</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="SteelTalonsSurveyorCommandSet">
+		<Cmd>Command_SteelTalonsCallForTransportVehicle</Cmd>
+		<Cmd>Command_UnPackSurveyor</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>
+
+	<LogicCommandSet
+		id="ZOCOMSurveyorCommandSet">
+		<Cmd>Command_ZOCOMCallForTransportVehicle</Cmd>
+		<Cmd>Command_UnPackSurveyor</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>	
+
+	<LogicCommandSet
+		id="NODEmissaryCommandSet">
+		<Cmd>Command_NodCallForTransportVehicle</Cmd>
+		<Cmd>Command_UnPackEmissary</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="BlackHandEmissaryCommandSet">
+		<Cmd>Command_UnPackEmissary</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>	
+	
+	<LogicCommandSet
+		id="AlienExplorerCommandSet">
+		<Cmd>Command_UnpackExplorer</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>	
+	
+	<LogicCommandSet
+		id="Traveler59ExplorerCommandSet">
+		<Cmd>Command_UnpackExplorer</Cmd>
+		<Cmd>Command_AttackMove</Cmd>			
+	</LogicCommandSet>			   
+  
+</AssetDeclaration>	

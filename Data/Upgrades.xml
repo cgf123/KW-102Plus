@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	
+
+		
+	<UpgradeTemplate id="Upgrade_MarkedOfKaneTechCenterSuperChargedParticleBeam"		
+		LocalPlayerProductionStartedEvaEvent="None"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		
+		DisplayName="UpgradeName:MarkedOfKaneTechCenterSuperChargedParticleBeam"
+		AcquireHint="UpgradePrereq:MarkedOfKaneSuperChargedParticleBeam"
+		TypeDescription="UpgradeType:MarkedOfKaneSuperChargedParticleBeam"
+		Description="UpgradeDesc:MarkedOfKaneSuperChargedParticleBeam"
+		Type="PLAYER"
+		BuildTime="60.0s"
+		BuildCost="2500"
+		ResearchSound="AudioEvent:NOD_Enlightened_SuperChargedParticleBeamUpgrade"
+		IconImage="Button_Upgrade_SuperCharBeam">
+	</UpgradeTemplate>
+	
+
+	<UpgradeTemplate id="Upgrade_SteelTalonsEMPGrenades"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"	
+		
+		DisplayName="UpgradeName:EMPGrenades"
+		AcquireHint="UpgradePrereq:GDIAPAmmo"
+		TypeDescription="UpgradeType:EMPGrenades"
+		Description="UpgradeDesc:EMPGrenades"
+		Type="PLAYER"
+		BuildCost="1000"
+		BuildTime="30s"
+		ResearchSound="AudioEvent:GDI_Armory_EMPGrenadesUpgrade"
+		IconImage="Button_Ability_FireEMPGrenades">
+		<GameDependency>
+			<RequiredObject>SteelTalonsTechCenter</RequiredObject>
+		</GameDependency>		
+	</UpgradeTemplate>
+	
+	
+	<UpgradeTemplate id="Upgrade_Traveler59AdvancedArticulators"
+		
+		LocalPlayerProductionStartedEvaEvent="None"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		
+		DisplayName="UpgradeName:Traveler59AdvancedArticulators"
+		AcquireHint="UpgradePrereq:Traveler59AdvancedArticulators"
+		TypeDescription="UpgradeType:Traveler59AdvancedArticulators"
+		Description="UpgradeDesc:Traveler59AdvancedArticulators"
+		Type="PLAYER"
+		BuildCost="1000"
+		BuildTime="30s"
+		ResearchSound="AudioEvent:ALI_AdvancedArticulators_Upgrade"
+		IconImage="Button_Upgrade_AdvArticulators"
+	/>			
+	
+</AssetDeclaration>

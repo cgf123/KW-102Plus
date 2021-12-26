@@ -638,23 +638,25 @@
 					AcceptModelCondition=""
 					RejectModelCondition="" />
 			</SpecialPower>
-			<SpecialAbilityUpdate
-				id="086BDEF5"
+			<!-- Replaced SAUpdate with WFSAUpdate -->
+		   <WeaponFireSpecialAbilityUpdate
+				id="16D9E43A"
 				GrabPassengerHealGain="0%"
 				SpecialPowerTemplate="EMPGrenadesGetInRange"
 				StartAbilityRange="260"
 				AbilityAbortRange="1E+07"
 				PreparationTime="0s"
-				PersistentPrepTime="0s"
-				PersistentCount="-1"
-				PackTime="0s"
-				UnpackTime="0s"
+				PersistentPrepTime="0.1s"
+				PersistentCount="2"
+				PackTime="0.5s"
+				UnpackTime="0.9s"
 				PreTriggerUnstealthTime="0s"
-				Options=""
+				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE CHECK_PREVENT_CONDITIONS"
 				PackUnpackVariationFactor="0"
 				ParalyzeDurationWhenCompleted="0s"
 				ParalyzeDurationWhenAborted="0s"
 				SpecialObject=""
+				SpecialObjectAttachToBone=""
 				MaxSpecialObjects="1"
 				EffectDuration="0s"
 				EffectValue="1"
@@ -674,15 +676,34 @@
 				RejectedConditions=""
 				SetObjectStatusOnTrigger=""
 				ClearObjectStatusOnExit=""
+				ContactPointOverride=""
 				TriggerAttributeModifier=""
 				AttributeModifierDuration="0s"
 				ChainedButton="Command_FireEMPGrenades"
 				RequireAndSpendTiberiumOnCaster="0"
 				DisabledTypesToProcess="HELD"
 				DisabledTypesToContinueSoundsFor="HELD"
-				StartRechargeOnExit="False"
+				StartRechargeOnExit="True"
 				GoIdleInStartPreparation="True"
-				FaceTarget="True" />
+				FaceTarget="True"
+				SpecialWeapon="GDIGrenadeSoldierEMPGrenade1"
+				WhichSpecialWeapon="1"
+				BusyForDuration="0.9s"
+				WeaponSlotID="1"
+				WeaponSlotType="PRIMARY_WEAPON"
+				SkipContinue="False"
+				NeedLivingTargets="False"
+				PlayWeaponPreFireFX="False"
+				OffsetTargetLocationFromObject="False"
+				DestealthClosestObjectMatchingFilter="False" />	
+			<!--  ///////////////////////////////////////////////////////////////////////////////////// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+			<SpecialAbilityUpdate
+				id="ModuleTag_EMPGrenadesGetInRangeUpdate"
+				SpecialPowerTemplate="EMPGrenadesGetInRange"
+				UnpackTime="0s"
+				PackTime="0s"
+				StartAbilityRange="260"
+				ChainedButton="Command_FireEMPGrenades" />				
 			<HordeDispatchSpecialPower
 				id="CA58A312"
 				SpecialPowerTemplate="SpecialPower_FireEMPGrenades"
@@ -717,7 +738,7 @@
 				AdjustVictim="False"
 				UseDistanceFromCommandCenter="False"
 				ChildModuleHandlesFX="False"
-				MaxMembersToDispatchTo="4">
+				MaxMembersToDispatchTo="2">
 				<AttributeModifierAffects
 					Rule="UNPARSED"
 					Relationship=""
@@ -860,10 +881,6 @@
 						Y="10"
 						LeaderRank="-1"
 						LeaderIndex="0" />
-				</RankInfo>
-				<RankInfo
-					RankID="2"
-					UnitType="ZOCOMGrenadeSoldier">
 					<Position
 						X="-20"
 						Y="-10"
@@ -873,10 +890,9 @@
 						X="-20"
 						Y="10"
 						LeaderRank="-1"
-						LeaderIndex="0" />
+						LeaderIndex="0" />						
 				</RankInfo>
 				<RankToReleaseWhenAttacking>1</RankToReleaseWhenAttacking>
-				<RankToReleaseWhenAttacking>2</RankToReleaseWhenAttacking>
 			</HordeContain>
 			
 			<!-- AI use EMP -->

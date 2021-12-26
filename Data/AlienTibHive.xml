@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<GameObject
-		id="Traveler59TiberiumTower"
-		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS STRUCTURE SUPPLY_GATHERING_CENTER NOT_AUTOACQUIRABLE FS_MONEY_STORAGE COVER TIBERIUM_BASED AUTO_ACQUIRABLE_BY_AI"
-		Description="Desc:Traveler59TiberiumTower"
-		TypeDescription="Type:Traveler59TiberiumTower"
+		id="AlienTibHive"
+		KindOf="SELECTABLE IMMOBILE CAN_ATTACK CAN_CAST_REFLECTIONS STRUCTURE CAN_SEE_THROUGH_STRUCTURE IGNORE_FOR_VICTORY TIBERIUM_BASED CAN_ATTACK_STEALTHED AUTO_ACQUIRABLE_BY_AI"
+		Description="DESC:TiberiumHive"
 		RadarPriority="STRUCTURE"
 		BuildCompletion="INVALID"
 		FenceWidth="0"
 		FenceXOffset="0"
 		RemoveTerrainRadius="0"
 		EmotionRange="0"
-		PlacementViewAngle="225d"
+		PlacementViewAngle="270d"
 		BuildFadeInOnCreateTimeSeconds="0s"
 		FactoryExitWidth="0"
 		FactoryExtraBibWidth="0"
-		Side="Traveler59"
-		EditorName="Traveler59TiberiumTower"
+		Side="ALIEN"
+		EditorName="AlienTibHive"
 		EditorSorting="STRUCTURE"
 		BountyValue="0"
-		BuildTime="30"
+		BuildTime="10"
 		BuildFadeInOnCreateTime="0"
-		EnergyProduction="-15"
+		EnergyProduction="0"
 		EnergyBonus="0"
-		CommandSet="Traveler59TiberiumTowerCommandSet"
-		SelectPortrait="Portrait_ALIENExtractor"
-		ButtonImage="Portrait_ALIENExtractor"
+		CommandSet="AlienPhotonCannonCommandSet"
+		SelectPortrait="Portrait_TiberiumHive"
+		ButtonImage="Portrait_TiberiumHive"
 		VoicePriority="0"
 		MinZIncreaseForVoiceMoveToHigherGround="-1"
 		CrowdResponse=""
@@ -58,20 +57,20 @@
 		FiringArc="360"
 		CamouflageDetectionMultiplier="1"
 		SelectionPriority="2147483647"
-		ProductionQueueType="MAIN_STRUCTURE"
-		BuildPlacementTypeFlag="MAIN_STRUCTURE"
-		BuildOnRequiredObjectKindOf=""
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="TIBERIUM_FIELD"
+		BuildOnRequiredObjectKindOf="TIBERIUM_FIELD HARVESTABLE"
 		UnitCategory="STRUCTURE"
 		WeaponCategory="NONE"
 		HasFiredRecentlyTime="2s"
 		UnitTypeIcon=""
 		ReinvisibilityDelay="4s"
 		CaptureTime="0s"
-		BuildCost="3000"
-		RefundValue="700"
+		BuildCost="0"
+		RefundValue="0"
 		ThreatValue="0"
 		MaxSimultaneousOfType="0"
-		TransportSlotCount="1"
+		TransportSlotCount="0"
 		IsTrainable="True"
 		IsForbidden="False"
 		IsPrerequisite="False"
@@ -84,32 +83,14 @@
 		IsAutoBuilt="False"
 		CanPathThroughGates="True"
 		ShouldClearShotsOnIdle="False"
-		BuildInProximityToSamePlayerStucture="True">
-		<DisplayName>NAME:ALIENTiberiumTower</DisplayName>
-		<GameDependency
-			RequiredModelConditionsAny=""
-			ForbiddenModelConditions=""
-			RequiredObjectStatusAny="">
-			<ObjectFilter
-				Rule="ANY"
-				Relationship=""
-				Alignment="NONE"
-				Include=""
-				Exclude=""
-				StatusBitFlags=""
-				RejectStatusBitFlags=""
-				AcceptModelCondition=""
-				RejectModelCondition="">
-				<IncludeThing>Traveler59DronePlatform</IncludeThing>
-				<IncludeThing>Traveler59Foundry</IncludeThing>
-			</ObjectFilter>
-		</GameDependency>
+		BuildInProximityToSamePlayerStucture="False">
+		<DisplayName>NAME:TiberiumHive</DisplayName>
 		<ArmorSet
-			Armor="AlienTiberiumTowerArmor"
+			Armor="AlienTibHiveArmor"
 			DamageFX="FactionStructureDamageFX"
 			Conditions="" />
 		<SkirmishAIInformation
-			BaseBuildingLocation="TIBERIUM"
+			BaseBuildingLocation="SIDE"
 			ConquerMetricsOverrideDamageType="UNDEFINED"
 			ConquerMetricsOverrideAntiMask="ANTI_GROUND"
 			UnitBuilderStandardCombatUnit="False" />
@@ -162,120 +143,8 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="ABTIBERTOW_SKN"
+						Name="ABTIBBHIVE"
 						ExtraMesh="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM01"
-						FXParticleSystemTemplate="AlienRefineryTibA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM01"
-						FXParticleSystemTemplate="AlienTibDistortionA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM02"
-						FXParticleSystemTemplate="AlienRefineryTibA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM02"
-						FXParticleSystemTemplate="AlienTibDistortionA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM03"
-						FXParticleSystemTemplate="AlienRefineryTibA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM03"
-						FXParticleSystemTemplate="AlienTibDistortionA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM04"
-						FXParticleSystemTemplate="AlienRefineryTibA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM04"
-						FXParticleSystemTemplate="AlienTibDistortionA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM05"
-						FXParticleSystemTemplate="AlienRefineryTibA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM05"
-						FXParticleSystemTemplate="AlienTibDistortionA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM06"
-						FXParticleSystemTemplate="AlienRefineryTibA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM06"
-						FXParticleSystemTemplate="AlienTibDistortionA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM07"
-						FXParticleSystemTemplate="AlienRefineryTibA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBSTEAM07"
-						FXParticleSystemTemplate="AlienTibDistortionA"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBRECTUM"
-						FXParticleSystemTemplate="AlienRefineryRec01"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="TIBRECTUM"
-						FXParticleSystemTemplate="AlienRefineryRec02"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -284,7 +153,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:ABTIBERTOWBLD_SKN1"
+						Name="ABTIBBHIVEBLD_SKN"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<ModelConditionState
@@ -294,7 +163,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="ABTIBERTOW_D3SN"
+						Name="ABTIBBHIVE_D3SN"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<ModelConditionState
@@ -304,8 +173,71 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="ABTIBERTOW_D2SN"
+						Name="ABTIBBHIVE_D2SN"
 						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FXBone02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FXBone02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FXBone02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -314,36 +246,26 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="ABTIBERTOW_SKN"
+						Name="ABTIBBHIVE"
 						ExtraMesh="False" />
 					<Texture
-						Original="ABTiberTow"
-						New="ABTiberTow_D" />
+						Original="Asset not found in stream: [21E727DA:CF86DD51]"
+						New="ABTibHiveD" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
 				</ModelConditionState>
-				<AnimationState
-					ParseCondStateType="PARSE_DEFAULT"
-					Flags="DO_NOT_PLAY_WHEN_UNPOWERED"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="ABTIBERTOW_IDLA"
-						AnimationMode="LOOP"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="STRUCTURE_UNPACKING"
@@ -353,7 +275,7 @@
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False">
 					<Animation
-						AnimationName="ABTIBERTOWBLD_AAN"
+						AnimationName="ABTIBBHIVEBLD_AAN"
 						AnimationMode="ONCE"
 						Distance="0"
 						AnimationBlendTime="5"
@@ -379,7 +301,7 @@
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False">
 					<Animation
-						AnimationName="ABTIBERTOW_D3AN"
+						AnimationName="ABTIBBHIVE_D3AN"
 						AnimationMode="MANUAL"
 						Distance="0"
 						AnimationBlendTime="5"
@@ -411,7 +333,7 @@
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False">
 					<Animation
-						AnimationName="ABTIBERTOW_D2AN"
+						AnimationName="ABTIBBHIVE_D2AN"
 						AnimationMode="MANUAL"
 						Distance="0"
 						AnimationBlendTime="5"
@@ -441,7 +363,7 @@
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False">
 					<Animation
-						AnimationName="ABTIBERTOW_D2AN"
+						AnimationName="ABTIBBHIVE_D2AN"
 						AnimationMode="ONCE"
 						Distance="0"
 						AnimationBlendTime="0"
@@ -465,7 +387,7 @@
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False">
 					<Animation
-						AnimationName="ABTIBERTOW_D3AN"
+						AnimationName="ABTIBBHIVE_D3AN"
 						AnimationMode="ONCE"
 						Distance="0"
 						AnimationBlendTime="0"
@@ -482,109 +404,7 @@
 				</AnimationState>
 			</ScriptedModelDraw>
 			<ScriptedModelDraw
-				id="8288DF5F"
-				RecoilDamping="0.4"
-				MaxRecoilDistance="3"
-				InitialRecoilSpeed="2"
-				RecoilSettleSpeed="0.065"
-				MinLODRequired="LOW"
-				ProjectileBoneFeedbackEnabledSlots=""
-				TrackMarks=""
-				DependencySharedModelFlags=""
-				HighDetailLODThreshold="0"
-				LowDetailLODThreshold="0"
-				WadingParticleSys=""
-				AlphaCameraFadeOuterRadius="0"
-				AlphaCameraFadeInnerRadius="0"
-				AlphaCameraAtInnerRadius="100%"
-				StaticSortLevelWhileFading="-1"
-				BirthFadeTime="0"
-				OkToChangeModelColor="False"
-				AnimationsRequirePower="True"
-				UseYAxisForTurretRotation="False"
-				TrackMarksOnlyWhenCorneringQuickly="False"
-				UseProducerTexture="False"
-				NoRotate="False"
-				UseFiringArcRotation="False"
-				Selectable="True"
-				RandomTextureFixedRandomIndex="False"
-				ParticlesAttachedToAnimatedBones="False"
-				ParticleBonesCheckDrawable="False"
-				ShadowForceDisable="False"
-				SwitchModelLODMode="False"
-				StaticModelLODMode="False"
-				ShowShadowWhileContained="False"
-				UseStandardModelNames="False"
-				UseDefaultAnimation="False"
-				BirthFadeAdditive="False"
-				ZWriteDisableOverride="False"
-				MultiPlayerOnly="False"
-				AffectedByStealth="True"
-				InvertStealthOpacity="False"
-				HighDetailOnly="False"
-				SetAnimsToLastFrameOnConstructionComplete="True">
-				<ModelConditionState
-					ParseCondStateType="PARSE_DEFAULT"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name="ABTIBER_TIB_SKN"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<AnimationState
-					ParseCondStateType="PARSE_DEFAULT"
-					StateName="STATE_none"
-					Flags="START_FRAME_FIRST"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="ABTIBER_TIB_LOA"
-						AnimationMode="ONCE_BACKWARDS"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DOCKING_ACTIVE"
-					StateName="STATE_loading"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="ABTIBER_TIB_LOA"
-						AnimationMode="ONCE"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-				</AnimationState>
-			</ScriptedModelDraw>
-			<ScriptedModelDraw
-				id="ED98238B"
+				id="A649EBC1"
 				RecoilDamping="0.4"
 				MaxRecoilDistance="3"
 				InitialRecoilSpeed="2"
@@ -614,9 +434,9 @@
 				ParticleBonesCheckDrawable="False"
 				ShadowForceDisable="False"
 				SwitchModelLODMode="False"
-				StaticModelLODMode="True"
+				StaticModelLODMode="False"
 				ShowShadowWhileContained="False"
-				UseStandardModelNames="True"
+				UseStandardModelNames="False"
 				UseDefaultAnimation="False"
 				BirthFadeAdditive="False"
 				ZWriteDisableOverride="False"
@@ -631,93 +451,78 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="ABTIBERTOWX_SKN"
+						Name="ABTIBBHIVEDR_SKN"
 						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="STRUCTURE_UNPACKING"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name=""
-						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="none"
+						FXParticleSystemTemplate="TibInfestationBugsSpew"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="none"
+						FXParticleSystemTemplate="TibInfestationBugsSpewGlow"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
 				</ModelConditionState>
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
-					StateName="STATE_bored"
+					Flags="RESTART_ANIM_WHEN_COMPLETE DO_NOT_PLAY_WHEN_UNPOWERED"
 					EnteringStateFX=""
 					FrameForPristineBonePositions="0"
 					ShareAnimation="False"
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False">
 					<Animation
-						AnimationName="ABTIBERTOWX_IDL"
-						AnimationMode="LOOP"
+						AnimationName="ABTIBBHIVEDR_OPN"
+						AnimationMode="ONCE"
 						Distance="0"
-						AnimationBlendTime="5"
+						AnimationBlendTime="15"
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
 						WeaponTimingSlotID="1"
-						AnimationPriority="1"
+						AnimationPriority="30"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
 						AnimationMustCompleteBlend="False"
 						UseWeaponTiming="False"
 						FadingIn="False" />
+					<Animation
+						AnimationName="ABTIBBHIVEDR_CLS"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="10"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+					<FXEvent
+						Frame="29"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_AlienTiberiumInfestation"
+						Bone="ABBHiveB"
+						FireWhenSkipped="True" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING"
-					StateName="STATE_loading"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
 					EnteringStateFX=""
 					FrameForPristineBonePositions="0"
 					ShareAnimation="False"
 					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="ABTIBERTOWX_D3"
-						AnimationMode="ONCE"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DOCKING_ACTIVE"
-					StateName="STATE_loading"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="ABTIBERTOWX_LOA"
-						AnimationMode="ONCE"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-				</AnimationState>
+					SimilarRestart="False" />
 			</ScriptedModelDraw>
 		</Draws>
 		<Behaviors>
@@ -744,7 +549,7 @@
 					MaxKillerAngle="-0.9999999d"
 					DeathTypes="CATALYST"
 					DeathTypesForbidden="" />
-			</FireWeaponWhenDead>
+			</FireWeaponWhenDead>		
 			<TemporarilyDefectUpdate
 				id="3473AFD2"
 				DefectionFrameCount="100" />
@@ -760,7 +565,7 @@
 					DeathTypesForbidden="" />
 				<Event
 					Index="onTransitionToDamaged"
-					FX="FX_AlienBuildingDamagedL"
+					FX="FX_AlienBuildingDamagedS"
 					MinThreshold="0"
 					MaxThreshold="0"
 					Direction="Default"
@@ -768,7 +573,7 @@
 					ForceUseDoFXObj="False" />
 				<Event
 					Index="onTransitionToReallyDamaged"
-					FX="FX_AlienBuildingDamagedL"
+					FX="FX_AlienBuildingDamagedS"
 					MinThreshold="0"
 					MaxThreshold="0"
 					Direction="Default"
@@ -776,54 +581,13 @@
 					ForceUseDoFXObj="False" />
 				<Event
 					Index="onTransitionToRubble"
-					FX="FX_AlienBuildingRubbleL"
+					FX="FX_AlienBuildingRubbleS"
 					MinThreshold="0"
 					MaxThreshold="0"
 					Direction="Default"
 					OrientToObject="True"
 					ForceUseDoFXObj="False" />
 			</FXListBehavior>
-			<DistributedMoney
-				id="BBA9F939"
-				Capacity="99999999"
-				OnDieSpawnPercentage="1%"
-				RedistributeMoneyOnDeathType="SUICIDED" />
-			<SupplyCenterCreate />
-			<SupplyCenterDockUpdate
-				id="B1E09186"
-				NumberApproachPositions="-1"
-				MinDockTime="9s"
-				ObjectsInLineWeight="9s"
-				AllowsPassthrough="True"
-				GoToRallyPointAfterDock="True"
-				ShouldDockInReverse="False"
-				ValueMultiplier="1"
-				BonusScience="INVALID"
-				BonusScienceMultiplier="0"
-				DistributedDeposit="True">
-				<ForVoiceRetreatThisIsASafeHarborToObjectFilter
-					Rule="NONE"
-					Relationship=""
-					Alignment="NONE"
-					Include="HARVESTER"
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-			</SupplyCenterDockUpdate>
-			<CreateObjectDie
-				id="36031C5A"
-				CreationList="FactionStructureTiberiumFieldOCL">
-				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="SUICIDED" />
-			</CreateObjectDie>
 			<SlowDeath
 				id="73542D4A"
 				SinkRate="4"
@@ -857,24 +621,33 @@
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
 			</SlowDeath>
-			<QueueProductionExitUpdate
-				id="01734524"
-				PlacementViewAngle="0d"
-				ExitDelay="0"
-				InitialBurst="0"
-				AllowAirborneCreation="False"
-				NoExitPath="False"
-				CanRallyToSlaughter="False"
-				ClearAlliesFromDestination="True">
-				<UnitCreatePoint
-					x="37.5"
-					y="-18.9"
-					z="0" />
-				<NaturalRallyPoint
-					x="104"
-					y="-18.9"
-					z="0" />
-			</QueueProductionExitUpdate>
+			<TiberiumFieldModBehavior
+				id="B706DB39"
+				ObjectStatus="WEAPON_UPGRADED_01"
+				ModelCondition="USER_4">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</TiberiumFieldModBehavior>
+			<FireWeaponUpdate
+				id="955F8DC3"
+				ActiveWhenDisabled=""
+				HeroModeTrigger="False"
+				ChargingModeTrigger="False"
+				AliveOnly="False">
+				<FireWeaponNugget
+					WeaponName="TiberiumHiveWeapon"
+					FireDelay="1s"
+					FireInterval="0s"
+					OneShot="False" />
+			</FireWeaponUpdate>
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
 			<RepairUpdate
 				id="41FDEB2A"
 				RepopThreshold="0.2"
@@ -920,10 +693,11 @@
 					<IncludeThing>Traveler59Assimilator</IncludeThing>
 				</CanEnterFilter>
 			</EngineerContain>
+			<!--
 			<CreateObjectDie
 				id="34FD1923"
-				CreationList="OCL_GenericTraveler59BuildingDestruction"
-				UpgradeForbidden="  ">
+				CreationList="OCL_GenericAlienBuildingDestruction"
+				UpgradeForbidden="">
 				<DieMuxData
 					ExemptStatus=""
 					RequiredStatus=""
@@ -935,7 +709,7 @@
 			</CreateObjectDie>
 			<CreateObjectDie
 				id="4BF392A4"
-				CreationList="OCL_GenericTraveler59BuildingSuicide">
+				CreationList="OCL_GenericAlienBuildingDestruction">
 				<DieMuxData
 					ExemptStatus=""
 					RequiredStatus=""
@@ -945,150 +719,12 @@
 					DeathTypes="SUICIDED"
 					DeathTypesForbidden="" />
 			</CreateObjectDie>
-			<StructureUnpackUpdate
-				id="1E64F0ED"
-				UnpackTime="2s" />
-			<StatusBitsUpgrade
-				id="A99285D7"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_BlackHandFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="AE9552F0"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_GDIFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="C3EA57C0"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_NODFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="CC50B09D"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_AlienFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="6DE1E323"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="D808DAD9"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_Reaper17Faction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="28389CC2"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_ZOCOMFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="8C28319D"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_MarkedOfKaneFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="AD99787E"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_Traveler59Faction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<SpawnBehavior
-				id="EB2D043D"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				SpawnNumberData="1"
-				SpawnReplaceDelayData="9999s"
-				InitialBurst="0"
-				DamageTypesToPropagateToSlaves="ALL"
-				FadeInTime="0s"
-				InitialDelay="0s"
-				IsOneShotData="True"
-				CanReclaimOrphans="False"
-				AggregateHealth="False"
-				ExitByBudding="False"
-				SpawnedRequireSpawner="False"
-				RespectCommandLimit="False"
-				KillSpawnBasedOnModelConditionState="False"
-				ShareUpgrades="False"
-				SpawnInsideBuilding="False"
-				CombineOnCreate="False"
-				KillSpawnsOnDisabled="False"
-				PassExperienceToSpawned="False"
-				KillSpawnsOnCaptured="False">
-				<SpawnTemplate>Traveler59Harvester</SpawnTemplate>
-			</SpawnBehavior>
+			-->
 		</Behaviors>
 		<Body>
 			<ActiveBody
 				id="B313F576"
-				MaxHealth="10000"
+				MaxHealth="1000"
 				MaxHealthDamaged="0"
 				MaxHealthReallyDamaged="0"
 				InitialHealth="-1"
@@ -1112,25 +748,11 @@
 		<Geometry
 			IsSmall="False">
 			<Shape
-				Type="BOX"
-				ContactPointGeneration="NONE"
-				MajorRadius="25.0568"
-				MinorRadius="8.5811"
-				Height="45.3082"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="True">
-				<Offset
-					x="18"
-					y="0"
-					z="0" />
-			</Shape>
-			<Shape
 				Type="CYLINDER"
 				ContactPointGeneration="NONE"
-				MajorRadius="45"
-				MinorRadius="45"
-				Height="20"
+				MajorRadius="12.1114"
+				MinorRadius="12.1114"
+				Height="52.6624"
 				FrontAngle="0d"
 				Active="True"
 				UsedForHealthBox="True">
@@ -1142,31 +764,65 @@
 			<Shape
 				Type="CYLINDER"
 				ContactPointGeneration="NONE"
-				MajorRadius="40"
-				MinorRadius="40"
-				Height="10"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="True">
-				<Offset
-					x="41.1781"
-					y="0"
-					z="0" />
-			</Shape>
-			<Shape
-				Type="CYLINDER"
-				ContactPointGeneration="INFANTRY"
-				MajorRadius="17.1"
-				MinorRadius="17.1"
-				Height="64.8"
+				MajorRadius="23.2912"
+				MinorRadius="23.2912"
+				Height="26.3312"
 				FrontAngle="0d"
 				Active="True"
 				UsedForHealthBox="True">
 				<Offset
 					x="0"
-					y="0"
+					y="-9.53674E-07"
 					z="0" />
 			</Shape>
+			<ContactPoint>
+				<Pos
+					x="-14.9777"
+					y="-15.975"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="5.87087"
+					y="-6.02351"
+					z="48.8448" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="15.8223"
+					y="14.825"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-5.02617"
+					y="4.87353"
+					z="48.8448" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-5.02617"
+					y="-6.02351"
+					z="48.8448" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="15.8223"
+					y="-15.975"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="5.87087"
+					y="4.87353"
+					z="48.8448" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-14.9777"
+					y="14.825"
+					z="0" />
+			</ContactPoint>
 		</Geometry>
 		<AudioArrayVoice>
 			<AudioEntry
@@ -1176,7 +832,7 @@
 				EvaEvent="EnemyBuildingCaptured"
 				AudioType="voiceDefectingTowards" />
 			<AudioEntry
-				Sound="AudioEvent:ALI_Extractor_Select"
+				Sound="AudioEvent:ALI_TiberiumHive_Select"
 				AudioType="voiceSelect" />
 		</AudioArrayVoice>
 		<AudioArraySound>
@@ -1239,7 +895,7 @@
 			MaxVisionBonusPercent="50%"
 			MinVisionBonusPercent="-50%" />
 		<ProjectedBuildabilityInfo
-			Radius="250"
+			Radius="10"
 			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE"
 			StatusToReject=""
 			ModelConditionsToReject="" />

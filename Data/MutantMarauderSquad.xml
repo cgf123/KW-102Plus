@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<GameObject
-		id="SteelTalonsGrenadeSoldierSquad"
-		KindOf="SELECTABLE CAN_ATTACK INFANTRY ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAPTURE HORDE PATH_THROUGH_INFANTRY ARMY_SUMMARY LARGE_RECTANGLE_PATHFIND CAN_SHOOT_OVER_WALLS SKIRMISH_AI_DONT_GARRISON ANTI_GARRISON CAN_BE_FAVORITE_UNIT"
-		Description="Desc:SteelTalonsGrenadierSquad"
-		TypeDescription="Type:GDIGrenadierSquad"
+		id="MutantMarauderSquad"
+		KindOf="SELECTABLE CAN_ATTACK INFANTRY SCORE ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAPTURE HORDE ARMY_SUMMARY LARGE_RECTANGLE_PATHFIND HEALED_BY_TIBERIUM"
+		TypeDescription="Type:NeutralMutantMarauder"
 		RadarPriority="NOT_ON_RADAR"
 		BuildCompletion="INVALID"
 		FenceWidth="0"
@@ -15,17 +14,17 @@
 		BuildFadeInOnCreateTimeSeconds="0s"
 		FactoryExitWidth="0"
 		FactoryExtraBibWidth="0"
-		Side="SteelTalons"
-		EditorName="SteelTalonsGrenadeSoldierSquad"
+		Side="Neutral"
+		EditorName="MutantMarauderSquad"
 		EditorSorting="UNIT"
 		BountyValue="0"
-		BuildTime="8"
+		BuildTime="6"
 		BuildFadeInOnCreateTime="0"
 		EnergyProduction="0"
 		EnergyBonus="0"
-		CommandSet="SteelTalonsGrenadeSoldierSquadCommandSet"
-		SelectPortrait="Portrait_GDIGrenadierSquad"
-		ButtonImage="Portrait_GDIGrenadierSquad"
+		CommandSet="MutantSquadCommandSet"
+		SelectPortrait="Portrait_MutantMaurader"
+		ButtonImage="Portrait_MutantMaurader"
 		VoicePriority="0"
 		MinZIncreaseForVoiceMoveToHigherGround="-1"
 		CrowdResponse=""
@@ -43,12 +42,12 @@
 		RamPower="0"
 		RamZMult="1"
 		ShockwaveResistance="0"
-		CommandPoints="100"
+		CommandPoints="0"
 		CommandPointBonus="0"
 		VoiceAttackChargeTimeout="0"
 		MaxDistanceForEngaged="0"
 		EngagedStateTimeout="0"
-		ThreatLevel="0"
+		ThreatLevel="1"
 		SlopeLimitIndex="0"
 		PathfindDiameter="-1"
 		SupplyOverride="0"
@@ -62,13 +61,12 @@
 		BuildPlacementTypeFlag="INVALID"
 		BuildOnRequiredObjectKindOf=""
 		UnitCategory="INFANTRY"
-		WeaponCategory="BLAST"
+		WeaponCategory="GUN"
 		HasFiredRecentlyTime="2s"
-		UnitTypeIcon="GrenadierIcon"
+		UnitTypeIcon="MutantMarauderIcon"
 		ReinvisibilityDelay="4s"
-		WorldMapArmoryUpgradesAllowed="Upgrade_GDICompositeArmor Upgrade_SteelTalonsEMPGrenades"
 		CaptureTime="0s"
-		BuildCost="800"
+		BuildCost="600"
 		RefundValue="0"
 		ThreatValue="0"
 		MaxSimultaneousOfType="0"
@@ -86,26 +84,15 @@
 		CanPathThroughGates="True"
 		ShouldClearShotsOnIdle="False"
 		BuildInProximityToSamePlayerStucture="True">
-		<DisplayName>Name:GDIGrenadierSquad</DisplayName>
-		<GameDependency
-			RequiredModelConditionsAny=""
-			ForbiddenModelConditions=""
-			RequiredObjectStatusAny="">
-			<RequiredObject>SteelTalonsCommandPost</RequiredObject>
-		</GameDependency>
+		<DisplayName>Name:NeutralMutantMarauder</DisplayName>
 		<ArmorSet
 			Armor="NoArmor"
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="48"
+			Speed="57"
 			Condition="NORMAL"
 			Locomotor="NormalRangedSquadLocomotor" />
-		<SkirmishAIInformation
-			BaseBuildingLocation="FRONT"
-			ConquerMetricsOverrideDamageType="UNDEFINED"
-			ConquerMetricsOverrideAntiMask="ANTI_GROUND"
-			UnitBuilderStandardCombatUnit="True" />
 		<Draws>
 			<ScriptedModelDraw
 				id="50DF2C46"
@@ -165,7 +152,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="FXGRENADE_FP"
+						Name="FXMARUADER_FP"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<ModelConditionState
@@ -175,7 +162,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="SQUADMARKGUGRE"
+						Name="SQUADMARKAUMAR"
 						ExtraMesh="False" />
 				</ModelConditionState>
 			</ScriptedModelDraw>
@@ -286,7 +273,7 @@
 					AllowInterleavedFiring="False">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="SquadGrenadeRangefinder"
+						Template="MutantMarauderSquadGunRangeFinder"
 						Upgrade=""
 						ObjectStatus=""
 						IsPlayerUpgradePermanent="False" />
@@ -343,426 +330,6 @@
 				KillWhenRestingOnGround="False"
 				OrientToFlightPath="False"
 				IgnoreTerrainHeight="False" />
-			<ProductionUpdate
-				id="749674DE"
-				MaxQueueEntries="99"
-				NumDoorAnimations="0"
-				DoorOpeningTime="0s"
-				DoorOpeningTimeMetaUnit="0s"
-				DoorWaitOpenTime="0s"
-				DoorCloseTime="0s"
-				ConstructionCompleteDuration="0"
-				DisabledTypesToProcess=""
-				UnitInvulnerableTime="0"
-				SpecialPrepModelconditionTime="0"
-				BonusForType=""
-				SpeedBonusAudioLoop=""
-				Type="INVALID"
-				ProductionTimeDelayScalar="0s"
-				GiveNoXP="True"
-				VeteranUnitsFromVeteranFactory="False"
-				SetBonusModelConditionOnSpeedBonus="False"
-				SecondaryQueue="False"
-				IgnorePreReqs="False" />
-			<ModelConditionUpgrade
-				id="50180BB4"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="True"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				AddConditionFlags="UPGRADED_ARMOR"
-				RemoveConditionFlags=""
-				AddTempConditionFlag="TOPPLED"
-				TempConditionTime="0s">
-				<TriggeredBy>Upgrade_GDICompositeArmor</TriggeredBy>
-			</ModelConditionUpgrade>
-			<CreateAndEnterObjectSpecialPower
-				id="6D44A823"
-				SpecialPowerTemplate="SpecialPowerCallForTransportSteelTalons"
-				AntiCategory=""
-				AntiFX=""
-				AttributeModifier=""
-				AttributeModifierRange="0"
-				AttributeModifierFX=""
-				WeatherDuration="0"
-				InitiateFX=""
-				TriggerFX="FX_GDICallForTransportFlare"
-				SetModelCondition="TOPPLED"
-				SetModelConditionTime="0s"
-				GiveLevels="0"
-				ChangeWeather="NORMAL"
-				OnTriggerRechargeSpecialPower=""
-				BurnDecayModifier="0"
-				MaxDistanceFromCommandCenter="0"
-				UpdateModuleStartsAttack="False"
-				StartsPaused="False"
-				ReEnableAntiCategory="False"
-				AttributeModifierAffectsSelf="False"
-				AttributeModifierWeatherBased="False"
-				TargetEnemy="False"
-				TargetAllSides="False"
-				DisableDuringAnimDuration="False"
-				IdleWhenStartingPower="True"
-				AffectGood="False"
-				AffectEvil="False"
-				AffectAllies="True"
-				AvailableAtStart="True"
-				AdjustVictim="False"
-				UseDistanceFromCommandCenter="False"
-				ChildModuleHandlesFX="True"
-				OCL="OCL_SteelTalonsCallForTransport"
-				CreateLocation="CREATE_ABOVE_LOCATION"
-				MaxCreateCount="0"
-				NumberToSpawn="1"
-				DestinationOCL=""
-				RegisterObjectsWithSpecialAbilityUpdate="False">
-				<AttributeModifierAffects
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterMP
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterStrategic
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<FXOffset
-					x="25"
-					y="0"
-					z="0" />
-			</CreateAndEnterObjectSpecialPower>
-			<SpecialPower
-				id="9C918DD9"
-				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
-				AntiCategory=""
-				AntiFX=""
-				AttributeModifier=""
-				AttributeModifierRange="0"
-				AttributeModifierFX=""
-				WeatherDuration="0"
-				InitiateFX=""
-				TriggerFX=""
-				SetModelCondition="TOPPLED"
-				SetModelConditionTime="0s"
-				GiveLevels="0"
-				ChangeWeather="NORMAL"
-				OnTriggerRechargeSpecialPower=""
-				BurnDecayModifier="0"
-				MaxDistanceFromCommandCenter="0"
-				UpdateModuleStartsAttack="True"
-				StartsPaused="False"
-				ReEnableAntiCategory="False"
-				AttributeModifierAffectsSelf="False"
-				AttributeModifierWeatherBased="False"
-				TargetEnemy="False"
-				TargetAllSides="False"
-				DisableDuringAnimDuration="False"
-				IdleWhenStartingPower="False"
-				AffectGood="False"
-				AffectEvil="False"
-				AffectAllies="True"
-				AvailableAtStart="True"
-				AdjustVictim="False"
-				UseDistanceFromCommandCenter="False"
-				ChildModuleHandlesFX="False">
-				<AttributeModifierAffects
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterMP
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterStrategic
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-			</SpecialPower>
-			<CaptureSpecialAbilityUpdate
-				id="89E11CB0"
-				GrabPassengerHealGain="0%"
-				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
-				StartAbilityRange="30"
-				AbilityAbortRange="1E+07"
-				PreparationTime="10s"
-				PersistentPrepTime="0s"
-				PersistentCount="-1"
-				PackTime="1s"
-				UnpackTime="2s"
-				PreTriggerUnstealthTime="0s"
-				Options="DO_CAPTURE_FX"
-				PackUnpackVariationFactor="0"
-				ParalyzeDurationWhenCompleted="0s"
-				ParalyzeDurationWhenAborted="0s"
-				SpecialObject=""
-				MaxSpecialObjects="1"
-				EffectDuration="0s"
-				EffectValue="1"
-				EffectRange="0"
-				FleeRangeAfterCompletion="0"
-				DisableFXParticleSystem=""
-				PackSound=""
-				UnpackSound=""
-				PrepSoundLoop=""
-				TriggerSound=""
-				ActiveLoopSound=""
-				AwardXPForTriggering="0"
-				SkillPointsForTriggering="-1"
-				UnpackingVariation="0"
-				FreezeAfterTriggerDuration="0s"
-				RequiredConditions=""
-				RejectedConditions=""
-				SetObjectStatusOnTrigger=""
-				ClearObjectStatusOnExit=""
-				TriggerAttributeModifier=""
-				AttributeModifierDuration="0s"
-				ChainedButton=""
-				RequireAndSpendTiberiumOnCaster="0"
-				DisabledTypesToProcess="HELD"
-				DisabledTypesToContinueSoundsFor="HELD"
-				StartRechargeOnExit="False"
-				GoIdleInStartPreparation="True"
-				FaceTarget="True" />
-			<UnpauseSpecialPowerUpgrade
-				id="80BAE3EA"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="True"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				SpecialPowerTemplate="STEMPGrenadesGetInRange"
-				ObeyRechageOnTrigger="False">
-				<TriggeredBy>Upgrade_SteelTalonsEMPGrenades</TriggeredBy>
-			</UnpauseSpecialPowerUpgrade>
-			<SpecialPower
-				id="14DA1D3C"
-				SpecialPowerTemplate="STEMPGrenadesGetInRange"
-				AntiCategory=""
-				AntiFX=""
-				AttributeModifier=""
-				AttributeModifierRange="0"
-				AttributeModifierFX=""
-				WeatherDuration="0"
-				InitiateFX=""
-				TriggerFX=""
-				SetModelCondition="TOPPLED"
-				SetModelConditionTime="0s"
-				GiveLevels="0"
-				ChangeWeather="NORMAL"
-				OnTriggerRechargeSpecialPower=""
-				BurnDecayModifier="0"
-				MaxDistanceFromCommandCenter="0"
-				UpdateModuleStartsAttack="True"
-				StartsPaused="False"
-				ReEnableAntiCategory="False"
-				AttributeModifierAffectsSelf="False"
-				AttributeModifierWeatherBased="False"
-				TargetEnemy="False"
-				TargetAllSides="False"
-				DisableDuringAnimDuration="False"
-				IdleWhenStartingPower="False"
-				AffectGood="False"
-				AffectEvil="False"
-				AffectAllies="True"
-				AvailableAtStart="True"
-				AdjustVictim="False"
-				UseDistanceFromCommandCenter="False"
-				ChildModuleHandlesFX="False">
-				<AttributeModifierAffects
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterMP
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterStrategic
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-			</SpecialPower>
-			<!-- Replaced SAUpdate with WFSAUpdate -->
-		   <WeaponFireSpecialAbilityUpdate
-				id="16D9E43A"
-				GrabPassengerHealGain="0%"
-				SpecialPowerTemplate="STEMPGrenadesGetInRange"
-				StartAbilityRange="260"
-				AbilityAbortRange="1E+07"
-				PreparationTime="0s"
-				PersistentPrepTime="0.1s"
-				PersistentCount="2"
-				PackTime="0.5s"
-				UnpackTime="0.9s"
-				PreTriggerUnstealthTime="0s"
-				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE CHECK_PREVENT_CONDITIONS"
-				PackUnpackVariationFactor="0"
-				ParalyzeDurationWhenCompleted="0s"
-				ParalyzeDurationWhenAborted="0s"
-				SpecialObject=""
-				SpecialObjectAttachToBone=""
-				MaxSpecialObjects="1"
-				EffectDuration="0s"
-				EffectValue="1"
-				EffectRange="0"
-				FleeRangeAfterCompletion="0"
-				DisableFXParticleSystem=""
-				PackSound=""
-				UnpackSound=""
-				PrepSoundLoop=""
-				TriggerSound=""
-				ActiveLoopSound=""
-				AwardXPForTriggering="0"
-				SkillPointsForTriggering="-1"
-				UnpackingVariation="0"
-				FreezeAfterTriggerDuration="0s"
-				RequiredConditions=""
-				RejectedConditions=""
-				SetObjectStatusOnTrigger=""
-				ClearObjectStatusOnExit=""
-				ContactPointOverride=""
-				TriggerAttributeModifier=""
-				AttributeModifierDuration="0s"
-				ChainedButton="Command_FireSTEMPGrenades"
-				RequireAndSpendTiberiumOnCaster="0"
-				DisabledTypesToProcess="HELD"
-				DisabledTypesToContinueSoundsFor="HELD"
-				StartRechargeOnExit="True"
-				GoIdleInStartPreparation="True"
-				FaceTarget="True"
-				SpecialWeapon="GDIGrenadeSoldierEMPGrenade1"
-				WhichSpecialWeapon="1"
-				BusyForDuration="0.9s"
-				WeaponSlotID="1"
-				WeaponSlotType="PRIMARY_WEAPON"
-				SkipContinue="False"
-				NeedLivingTargets="False"
-				PlayWeaponPreFireFX="False"
-				OffsetTargetLocationFromObject="False"
-				DestealthClosestObjectMatchingFilter="False" />	
-			<!--  ///////////////////////////////////////////////////////////////////////////////////// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->					
-			<HordeDispatchSpecialPower
-				id="CA58A312"
-				SpecialPowerTemplate="SpecialPower_FireSTEMPGrenades"
-				AntiCategory=""
-				AntiFX=""
-				AttributeModifier=""
-				AttributeModifierRange="0"
-				AttributeModifierFX=""
-				WeatherDuration="0"
-				InitiateFX=""
-				TriggerFX=""
-				SetModelCondition="TOPPLED"
-				SetModelConditionTime="0s"
-				GiveLevels="0"
-				ChangeWeather="NORMAL"
-				OnTriggerRechargeSpecialPower=""
-				BurnDecayModifier="0"
-				MaxDistanceFromCommandCenter="0"
-				UpdateModuleStartsAttack="False"
-				StartsPaused="False"
-				ReEnableAntiCategory="False"
-				AttributeModifierAffectsSelf="False"
-				AttributeModifierWeatherBased="False"
-				TargetEnemy="False"
-				TargetAllSides="False"
-				DisableDuringAnimDuration="False"
-				IdleWhenStartingPower="False"
-				AffectGood="False"
-				AffectEvil="False"
-				AffectAllies="True"
-				AvailableAtStart="True"
-				AdjustVictim="False"
-				UseDistanceFromCommandCenter="False"
-				ChildModuleHandlesFX="False"
-				MaxMembersToDispatchTo="2">
-				<AttributeModifierAffects
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterMP
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterStrategic
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-			</HordeDispatchSpecialPower>
 			<HordeContain
 				id="3473F0C6"
 				ContainMax="0"
@@ -787,7 +354,7 @@
 				KillPassengersOnDeath="False"
 				HasObjectStatusOfContainedEntry="True"
 				Enabled="True"
-				Slots="4"
+				Slots="6"
 				ExitPitchRate="0"
 				HealthRegenPercentPerSec="0"
 				ExitDelay="0"
@@ -857,36 +424,108 @@
 					DeathTypes=""
 					DeathTypesForbidden="" />
 				<InitialPayload
-					Name="SteelTalonsGrenadeSoldier"
-					Count="4" />
+					Name="MutantMarauder"
+					Count="6" />
 				<MeleeBehavior
 					Type="AMOEBA" />
 				<RankInfo
 					RankID="1"
-					UnitType="SteelTalonsGrenadeSoldier">
+					UnitType="MutantMarauder">
 					<Position
 						X="0"
-						Y="-10"
+						Y="-20"
 						LeaderRank="-1"
 						LeaderIndex="0" />
 					<Position
 						X="0"
-						Y="10"
+						Y="0"
+						LeaderRank="-1"
+						LeaderIndex="0" />
+					<Position
+						X="0"
+						Y="20"
+						LeaderRank="-1"
+						LeaderIndex="0" />
+				</RankInfo>
+				<RankInfo
+					RankID="2"
+					UnitType="MutantMarauder">
+					<Position
+						X="-20"
+						Y="-20"
 						LeaderRank="-1"
 						LeaderIndex="0" />
 					<Position
 						X="-20"
-						Y="-10"
+						Y="0"
 						LeaderRank="-1"
 						LeaderIndex="0" />
 					<Position
 						X="-20"
-						Y="10"
+						Y="20"
 						LeaderRank="-1"
-						LeaderIndex="0" />						
+						LeaderIndex="0" />
 				</RankInfo>
 				<RankToReleaseWhenAttacking>1</RankToReleaseWhenAttacking>
+				<RankToReleaseWhenAttacking>2</RankToReleaseWhenAttacking>
 			</HordeContain>
+			<ProductionUpdate
+				id="749674DE"
+				MaxQueueEntries="99"
+				NumDoorAnimations="0"
+				DoorOpeningTime="0s"
+				DoorOpeningTimeMetaUnit="0s"
+				DoorWaitOpenTime="0s"
+				DoorCloseTime="0s"
+				ConstructionCompleteDuration="0"
+				DisabledTypesToProcess=""
+				UnitInvulnerableTime="0"
+				SpecialPrepModelconditionTime="0"
+				BonusForType=""
+				SpeedBonusAudioLoop=""
+				Type="INVALID"
+				ProductionTimeDelayScalar="0s"
+				GiveNoXP="True"
+				VeteranUnitsFromVeteranFactory="False"
+				SetBonusModelConditionOnSpeedBonus="False"
+				SecondaryQueue="False"
+				IgnorePreReqs="False" />
+			<InvisibilityUpdate
+				id="1C76BCB8"
+				Options="STARTS_ACTIVE BROADCAST_INVERSE"
+				UpdatePeriod="1s"
+				BroadcastRange="20"
+				OpacityMin="40%"
+				OpacityMax="100%">
+				<InvisibilityNugget
+					ForbiddenConditions="ATTACKING PREATTACK_A FIRING_A FIRING_OR_PREATTACK_A RELOADING_A USING_WEAPON_A"
+					ForbiddenConditionExceptions=""
+					ForbiddenWeaponSets=""
+					ForbiddenStatus="IS_FIRING_WEAPON USING_ABILITY IS_AIMING_WEAPON SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING"
+					CamouflageLevel="0"
+					InvisibilityType="STEALTH"
+					Options=""
+					EnteringStealthFX=""
+					LeavingStealthFX=""
+					HintDetectableStates="IS_ATTACKING"
+					NoStealthForAttackWindow="0s" />
+				<BroadcastObjectFilter
+					Rule="ANY"
+					Relationship=""
+					Alignment="NONE"
+					Include="TIBERIUM_FIELD TIBERIUM"
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+			</InvisibilityUpdate>
+			<AimWeapon
+				id="06370EA6"
+				AimLowThreshold="0"
+				AimHighThreshold="0.5"
+				AimNearDistance="0"
+				AimFarDistance="0" />
 		</Behaviors>
 		<AI>
 			<HordeAIUpdate
@@ -894,7 +533,6 @@
 				AutoAcquireEnemiesWhenIdle="YES ATTACK_BUILDINGS"
 				StopChaseDistance="500"
 				HoldGroundCloseRangeDistance="0"
-				AILuaEventsList="GenericSquadFunctions_103"	
 				MinCowerTime="3s"
 				MaxCowerTime="5s"
 				RampageTime="0s"
@@ -913,7 +551,7 @@
 					IdleScanDelay="0.8s"
 					ReacquireDelay="5s"
 					StartupDelay="0s"
-					SympathyRange="100"
+					SympathyRange="25"
 					CheckVisionRange="False"
 					CanPickDynamicTargets="True"
 					RotateToTargetWhenAiming="True"
@@ -951,8 +589,8 @@
 				Type="BOX"
 				ContactPointGeneration="NONE"
 				MajorRadius="20"
-				MinorRadius="20"
-				Height="13"
+				MinorRadius="25"
+				Height="20"
 				FrontAngle="0d"
 				Active="True"
 				UsedForHealthBox="True" />
@@ -991,6 +629,5 @@
 			UseCrushAttack="False"
 			CrushOnlyWhileCharging="False"
 			CrushAllies="False" />
-		<DisplayUpgrade>Upgrade_SteelTalonsEMPGrenades</DisplayUpgrade>					
 	</GameObject>
 </AssetDeclaration>

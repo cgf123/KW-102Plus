@@ -1351,44 +1351,7 @@
 				TriggerFX="FX_AlienMMTP"
 				TargetFX=""
 				RequireStoredObjects="False"
-				KillObjectsIfPlacedInBadSpot="True" />
-				
-			<!-- Moved hexa aura -->
-			<AttributeModifierAuraUpdate
-				id="085F251C"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				AttributeModifierName="AttributeModifier_Leadership"
-				RefreshDelay="4s"
-				Range="500"
-				RequiredConditions=""
-				AntiCategory=""
-				AntiFX=""
-				MaxActiveRank="0"
-				RequiredObjectStatusFlags=""
-				TargetEnemy="False"
-				AllowPowerWhenAttacking="True"
-				InitiallyActive="True"
-				AffectGood="False"
-				AffectEvil="False"
-				RunWhileDead="False"
-				AllowSelf="False"
-				AffectContainedOnly="False"
-				AffectHordeMembersOnly="False">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="ALLIES"
-					Alignment="NONE"
-					Include="INFANTRY"
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-			</AttributeModifierAuraUpdate>				
+				KillObjectsIfPlacedInBadSpot="True" />		
 				
 			<Physics
 				id="6D41764B"

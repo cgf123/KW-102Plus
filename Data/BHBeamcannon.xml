@@ -1026,7 +1026,7 @@
 				JoinWithOtherBeams="False"
 				DissapateWhenTargetDead="True"
 				LineType="False"
-				TargetSamePlayerOnly="True" />
+				TargetSamePlayerOnly="False" />
 			<SpecialPower
 				id="A0B2B001"
 				SpecialPowerTemplate="SpecialPower_ReflectorAttack"

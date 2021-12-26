@@ -134,10 +134,17 @@
   <!-- Rav member agitation command option changed from 'target_object' to 'target_pos' - seems to work better -->
   <LogicCommand
 		Type="SPECIAL_POWER"
-    	Options="NEED_TARGET_POS"
+    	Options="NEED_TARGET_ENEMY_OBJECT NEED_TARGET_ALLY_OBJECT NEED_TARGET_NEUTRAL_OBJECT"
 		id="Command_FireTiberiumAgitation">
     <SpecialPower>SpecialPower_UseTiberiumAgitation</SpecialPower>
   </LogicCommand>		
+  
+  <LogicCommand
+		Type="SPECIAL_POWER"
+    		Options="NEED_TARGET_ENEMY_OBJECT NEED_TARGET_ALLY_OBJECT NEED_TARGET_NEUTRAL_OBJECT"
+		id="Command_UseTiberiumAgitation">
+    <SpecialPower>TiberiumAgitationGetInRange</SpecialPower>
+  </LogicCommand>  
  
 
 	<!-- Prodigy blink cd nerf -->

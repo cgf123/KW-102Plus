@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<GameObject
-		id="MarkedOfKaneBeamCannon"
-		KindOf="SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS TRANSPORT SIEGE_WEAPON PRELOAD SCORE ATTACK_NEEDS_LINE_OF_SIGHT CAN_REVERSE_MOVE VEHICLE CAN_BE_FAVORITE_UNIT"
-		Description="Desc:MarkedOfKaneBeamCannon"
-		TypeDescription="Type:MarkedOfKaneBeamCannon"
+		id="NODEmissary"
+		KindOf="SELECTABLE CAN_CAST_REFLECTIONS PRELOAD SCORE FS_FACTORY IGNORES_SELECT_ALL CAN_REVERSE_MOVE VEHICLE EXPANSION_UNIT CAN_BE_FAVORITE_UNIT"
+		Description="Desc:NODEmissary"
+		TypeDescription="Type:NODEmissary"
 		RadarPriority="UNIT"
 		BuildCompletion="INVALID"
 		FenceWidth="0"
 		FenceXOffset="0"
 		RemoveTerrainRadius="0"
 		EmotionRange="0"
-		PlacementViewAngle="0d"
+		PlacementViewAngle="315d"
 		BuildFadeInOnCreateTimeSeconds="0s"
 		FactoryExitWidth="0"
 		FactoryExtraBibWidth="0"
-		Side="MarkedOfKane"
-		EditorName="MarkedOfKaneBeamCannon"
+		Side="NOD"
+		EditorName="NODEmissary"
 		EditorSorting="UNIT"
 		BountyValue="0"
-		BuildTime="10"
+		BuildTime="15"
 		BuildFadeInOnCreateTime="0"
 		EnergyProduction="0"
 		EnergyBonus="0"
-		CommandSet="NODBeamCannonCommandSet"
-		SelectPortrait="Portrait_NODBeamCannon"
-		ButtonImage="Portrait_NODBeamCannon"
-		VoicePriority="208"
+		CommandSet="NODEmissaryCommandSet"
+		SelectPortrait="Portrait_NODEmissary"
+		ButtonImage="Portrait_NODEmissary"
+		VoicePriority="44"
 		MinZIncreaseForVoiceMoveToHigherGround="-1"
 		CrowdResponse=""
 		CampnessValue="0"
@@ -43,7 +43,7 @@
 		RamPower="0"
 		RamZMult="1"
 		ShockwaveResistance="100"
-		CommandPoints="100"
+		CommandPoints="0"
 		CommandPointBonus="0"
 		VoiceAttackChargeTimeout="0"
 		MaxDistanceForEngaged="0"
@@ -58,16 +58,16 @@
 		FiringArc="360"
 		CamouflageDetectionMultiplier="1"
 		SelectionPriority="2147483647"
-		ProductionQueueType="VEHICLE"
+		ProductionQueueType="OTHER_STRUCTURE"
 		BuildPlacementTypeFlag="INVALID"
 		BuildOnRequiredObjectKindOf=""
 		UnitCategory="VEHICLE"
-		WeaponCategory="CANNON"
+		WeaponCategory="NONE"
 		HasFiredRecentlyTime="2s"
 		UnitTypeIcon=""
 		ReinvisibilityDelay="7s"
 		CaptureTime="0s"
-		BuildCost="1000"
+		BuildCost="1500"
 		RefundValue="0"
 		ThreatValue="0"
 		MaxSimultaneousOfType="0"
@@ -85,40 +85,32 @@
 		CanPathThroughGates="True"
 		ShouldClearShotsOnIdle="False"
 		BuildInProximityToSamePlayerStucture="True">
-		<DisplayName>Name:NODBeamCannon</DisplayName>
+		<DisplayName>Name:NODEmissary</DisplayName>
 		<GameDependency
 			RequiredModelConditionsAny=""
 			ForbiddenModelConditions=""
 			RequiredObjectStatusAny="">
-			<RequiredObject>MarkedOfKaneOperationsCenter</RequiredObject>
+			<RequiredObject>NODConstructionYard</RequiredObject>
 		</GameDependency>
 		<ArmorSet
-			Armor="NODBeamCannonArmor"
+			Armor="NODEmissaryArmor"
 			DamageFX="VehicleDamageFX"
 			Conditions="" />
 		<LocomotorSet
-			Speed="75"
+			Speed="60"
 			Condition="NORMAL"
-			Locomotor="NODBeamCannonLocomotor" />
-		<SkirmishAIInformation
-			BaseBuildingLocation="FRONT"
-			ConquerMetricsOverrideDPS="150"
-			ConquerMetricsOverrideDamageType="GRENADE"
-			ConquerMetricsOverrideAntiMask="ANTI_GROUND"
-			UnitBuilderStandardCombatUnit="True" />
+			Locomotor="NODEmissaryLocomotor" />
 		<Draws>
 			<TruckDraw
-				id="50DF2C46"
+				id="14EA72D8"
 				RecoilDamping="0.4"
 				MaxRecoilDistance="3"
 				InitialRecoilSpeed="2"
 				RecoilSettleSpeed="0.065"
 				MinLODRequired="LOW"
 				ProjectileBoneFeedbackEnabledSlots=""
-				TrackMarks="EXTireTrack2"
+				TrackMarks=""
 				DependencySharedModelFlags=""
-				TrackMarksLeftBone="Bone_TireLR"
-				TrackMarksRightBone="Bone_TireRR"
 				HighDetailLODThreshold="0"
 				LowDetailLODThreshold="0"
 				WadingParticleSys=""
@@ -130,7 +122,7 @@
 				OkToChangeModelColor="True"
 				AnimationsRequirePower="True"
 				UseYAxisForTurretRotation="False"
-				TrackMarksOnlyWhenCorneringQuickly="True"
+				TrackMarksOnlyWhenCorneringQuickly="False"
 				UseProducerTexture="False"
 				NoRotate="False"
 				UseFiringArcRotation="False"
@@ -154,12 +146,12 @@
 				Dust=""
 				DirtSpray=""
 				PowerslideSpray=""
-				LeftFrontTireBone="Bone_Tire_LF"
-				RightFrontTireBone="Bone_Tire_RF"
-				LeftRearTireBone="Bone_Tire_LR"
-				RightRearTireBone="Bone_Tire_RR"
-				MidLeftRearTireBone="Bone_Tire_LM"
-				MidRightRearTireBone="Bone_Tire_RM"
+				LeftFrontTireBone="Bone_TireLF"
+				RightFrontTireBone="Bone_TireRF"
+				LeftRearTireBone="Bone_TireLR"
+				RightRearTireBone="Bone_TireRR"
+				MidLeftRearTireBone="Bone_TireLM"
+				MidRightRearTireBone="Bone_TireRM"
 				TireRotationMultiplier="0.2"
 				TireRotationMultiplierFront="1"
 				PowerslideRotationAddition="1.25"
@@ -172,22 +164,8 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="NUBEAM_SKN"
+						Name="NUSUV_SN"
 						ExtraMesh="False" />
-					<WeaponFireFXBone
-						WeaponSlotID="1"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_Weapon" />
-					<WeaponLaunchBone
-						WeaponSlotID="1"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_Weapon" />
-					<Turret
-						TurretNameKey="Turret"
-						TurretArtAngle="0d"
-						TurretPitch="Turret_Pitch"
-						TurretArtPitch="0d"
-						TurretID="1" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -196,7 +174,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="NUBEAM_FP"
+						Name="NUSUV_FP"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<ModelConditionState
@@ -206,29 +184,8 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="NUBEAMR_SKN"
+						Name="NUSUVR_SN"
 						ExtraMesh="False" />
-					<ParticleSysBone
-						BoneName="ROOTTRANSFORM"
-						FXParticleSystemTemplate="GDIDebrisSmallFire"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="ROOTTRANSFORM"
-						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="ROOTTRANSFORM"
-						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -237,253 +194,22 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="NUBEAM_SKN"
+						Name="NUSUV_SN"
 						ExtraMesh="False" />
 					<Texture
-						Original="NUBeam"
-						New="NUBeamD" />
-					<ParticleSysBone
-						BoneName="ROOTTRANSFORM"
-						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						Original="NUSuv"
+						New="NUSuv_D" />
 				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="AFFECTED_BY_EMP"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name="NUBEAM_SKN"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="PARALYZED"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name="NUBEAM_SKN"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="UNPACKING"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name="NUBEAM_SKN"
-						ExtraMesh="False" />
-					<ParticleSysBone
-						BoneName="FX_Weapon"
-						FXParticleSystemTemplate="BeamPreFireFlash"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="FX_Weapon"
-						FXParticleSystemTemplate="BeamPreFireDist"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="PREPARING"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name="NUBEAM_SKN"
-						ExtraMesh="False" />
-					<ParticleSysBone
-						BoneName="FX_Weapon"
-						FXParticleSystemTemplate="BeamConstantFire"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="FX_Weapon"
-						FXParticleSystemTemplate="BeamConstantFire02"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False" />
 			</TruckDraw>
-			<LaserDraw
-				id="9FE06199"
-				Texture1_UTile="1"
-				Texture1_VTile="0.5"
-				Texture2_UTile="1"
-				Texture2_VTile="0.03"
-				Texture1_UScrollRate="0"
-				Texture1_VScrollRate="0.2"
-				Texture2_UScrollRate="0"
-				Texture2_VScrollRate="1"
-				Texture1_NumFrames="1"
-				Texture1_FrameRate="30"
-				Texture2_NumFrames="1"
-				Texture2_FrameRate="30"
-				LaserWidth="20"
-				WeaponSlotID="-1"
-				LaserStateID="1"
-				UseDistortionShader="False">
-				<FXShader
-					ShaderName="Laser.fx"
-					TechniqueName=""
-					TechniqueIndex="0">
-					<Constants>
-						<Texture
-							Name="Texture1">
-							<Value>FXObeliskLaser</Value>
-						</Texture>
-						<Texture
-							Name="Texture2">
-							<Value>FXLaserOverlay</Value>
-						</Texture>
-					</Constants>
-				</FXShader>
-				<ObjectStatusValidation
-					ForbiddenStatus="WEAPON_UPGRADED_03"
-					RequiredStatus="" />
-			</LaserDraw>
-			<LaserDraw
-				id="5FC0AD86"
-				Texture1_UTile="1"
-				Texture1_VTile="0.5"
-				Texture2_UTile="1"
-				Texture2_VTile="0.01"
-				Texture1_UScrollRate="0"
-				Texture1_VScrollRate="0.2"
-				Texture2_UScrollRate="0"
-				Texture2_VScrollRate="1"
-				Texture1_NumFrames="1"
-				Texture1_FrameRate="30"
-				Texture2_NumFrames="1"
-				Texture2_FrameRate="1"
-				LaserWidth="50"
-				WeaponSlotID="-1"
-				LaserStateID="0"
-				UseDistortionShader="True">
-				<FXShader
-					ShaderName="Laser.fx"
-					TechniqueName=""
-					TechniqueIndex="0">
-					<Constants>
-						<Texture
-							Name="Texture1">
-							<Value>FXRailgunCoreDistortion</Value>
-						</Texture>
-						<Texture
-							Name="Texture2">
-							<Value>FXRailGunCoreMask</Value>
-						</Texture>
-					</Constants>
-				</FXShader>
-				<ObjectStatusValidation
-					ForbiddenStatus="WEAPON_UPGRADED_03"
-					RequiredStatus="" />
-			</LaserDraw>
-			<LaserDraw
-				id="B74F5F65"
-				Texture1_UTile="1"
-				Texture1_VTile="0.5"
-				Texture2_UTile="1"
-				Texture2_VTile="0.03"
-				Texture1_UScrollRate="0"
-				Texture1_VScrollRate="0.2"
-				Texture2_UScrollRate="0"
-				Texture2_VScrollRate="1"
-				Texture1_NumFrames="1"
-				Texture1_FrameRate="30"
-				Texture2_NumFrames="1"
-				Texture2_FrameRate="30"
-				LaserWidth="20"
-				WeaponSlotID="1"
-				LaserStateID="1"
-				UseDistortionShader="False">
-				<FXShader
-					ShaderName="Laser.fx"
-					TechniqueName=""
-					TechniqueIndex="0">
-					<Constants>
-						<Texture
-							Name="Texture1">
-							<Value>FXObeliskLaserHeroic</Value>
-						</Texture>
-						<Texture
-							Name="Texture2">
-							<Value>FXLaserOverlay</Value>
-						</Texture>
-					</Constants>
-				</FXShader>
-				<ObjectStatusValidation
-					ForbiddenStatus=""
-					RequiredStatus="WEAPON_UPGRADED_03" />
-			</LaserDraw>
-			<LaserDraw
-				id="E5D4C885"
-				Texture1_UTile="1"
-				Texture1_VTile="0.5"
-				Texture2_UTile="1"
-				Texture2_VTile="0.03"
-				Texture1_UScrollRate="0"
-				Texture1_VScrollRate="0.2"
-				Texture2_UScrollRate="0"
-				Texture2_VScrollRate="1"
-				Texture1_NumFrames="1"
-				Texture1_FrameRate="30"
-				Texture2_NumFrames="1"
-				Texture2_FrameRate="30"
-				LaserWidth="20"
-				WeaponSlotID="1"
-				LaserStateID="2"
-				UseDistortionShader="False">
-				<FXShader
-					ShaderName="Laser.fx"
-					TechniqueName=""
-					TechniqueIndex="0">
-					<Constants>
-						<Texture
-							Name="Texture1">
-							<Value>FXObeliskLaserHeroic</Value>
-						</Texture>
-						<Texture
-							Name="Texture2">
-							<Value>FXLaserOverlay</Value>
-						</Texture>
-					</Constants>
-				</FXShader>
-				<ObjectStatusValidation
-					ForbiddenStatus=""
-					RequiredStatus="WEAPON_UPGRADED_03" />
-			</LaserDraw>
 		</Draws>
 		<Behaviors>
-			<!-- REFLECTORZ !! -->
-			<PassiveAreaEffectBehavior
-				id="ModuleTag_BeamDummy"
-				EffectRadius="525"
-				HealingPercentPerSecond="0"
-				SurveyDelayFrames="2"
-				NonStackable="True" >
-				<Modifier>AttributeModifier_BeamDummy</Modifier>
-				<AllowFilter 
-					Rule="NONE"
-					Relationship="ALLIES"
-					Include="BEAM_TARGET_REFLECTOR">
-				</AllowFilter>
-			</PassiveAreaEffectBehavior>			
-		
 			<AttributeModifierPoolUpdate
 				id="513BC476" />
 			<SquishCollide
@@ -568,9 +294,6 @@
 				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
 				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
 			</AttributeModifierUpgrade>
-			<StancesBehavior
-				id="54CA416E"
-				StanceTemplate="Generic" />
 			<LevelUpUpgrade
 				id="A92BDFEA"
 				RequiresAllTriggers="False"
@@ -640,52 +363,8 @@
 			<TemporarilyDefectUpdate
 				id="3473AFD2"
 				DefectionFrameCount="300" />
-			<WeaponSetUpdate
-				id="720F4A50">
-				<WeaponSlotTurret
-					ID="1"
-					InterleavedStyle="INTERLEAVE_RANDOM"
-					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
-					AllowInterleavedFiring="False">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="NODBeamCannonLaser"
-						Upgrade=""
-						ObjectStatus=""
-						IsPlayerUpgradePermanent="False" />
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="40"
-						MinimumPitch="0d"
-						PitchHeight="50%"
-						ControlledWeaponSlots=""
-						MinIdleScanTime="1s"
-						MaxIdleScanTime="5s"
-						MinIdleScanAngle="0"
-						MaxIdleScanAngle="90"
-						MaxDeflectionClockwise="180d"
-						MaxDeflectionAntiClockwise="180d"
-						NaturalTurretAngle="0d"
-						AllowsPitch="True"
-						RecenterWhenOutOfTurnRange="True">
-						<TurretAITargetChooserData
-							IdleScanDelay="0.8s"
-							ReacquireDelay="5s"
-							StartupDelay="0s"
-							SympathyRange="25"
-							CheckVisionRange="False"
-							CanPickDynamicTargets="True"
-							RotateToTargetWhenAiming="True"
-							CanAutoAcquireNonAutoAcquirable="False"
-							TargetingCompareList="DefaultTurretTargetingCompareList"
-							ActiveWhenPerformingSpecialAbility="False"
-							CanAcquireDynamicIfAssignedOutOfRange="True"
-							CanPickTargetsOutOfTurretAngle="False" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-			</WeaponSetUpdate>
 			<Physics
-				id="6D41764B"
+				id="E128C6A2"
 				MaxXRotationVelocity="360"
 				MaxYRotationVelocity="360"
 				MaxZRotationVelocity="360"
@@ -714,7 +393,7 @@
 				OrientToFlightPath="False"
 				IgnoreTerrainHeight="False" />
 			<ProductionUpdate
-				id="2387032B"
+				id="37DA5033"
 				MaxQueueEntries="99"
 				NumDoorAnimations="0"
 				DoorOpeningTime="0s"
@@ -736,7 +415,7 @@
 				IgnorePreReqs="False" />
 			<SlowDeath
 				id="73542D4A"
-				SinkRate="1"
+				SinkRate="2"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
 				SinkDelay="3s"
@@ -752,12 +431,12 @@
 				FadeTime="0s"
 				FadeDelay="0s"
 				DeathTypes=""
-				DeathObjectStatusBits=""
+				DeathObjectStatusBits="DONT_CLEAR_FOR_BUILD"
 				ShadowWhenDead="False"
 				Fade="False">
 				<OCL
 					Type="INITIAL">
-					<OCL>OCL_NODBeamDebris</OCL>
+					<OCL>OCL_NODSurveyorDebris</OCL>
 				</OCL>
 				<Sound
 					Type="INITIAL"
@@ -791,8 +470,8 @@
 					ForceUseDoFXObj="False" />
 			</FXListBehavior>
 			<SpecialPower
-				id="9300F150"
-				SpecialPowerTemplate="NODBeamCannonLaserSpecialPower"
+				id="DC3024FE"
+				SpecialPowerTemplate="SpecialPower_GrantUnpackUpgrade"
 				AntiCategory=""
 				AntiFX=""
 				AttributeModifier=""
@@ -855,254 +534,17 @@
 					AcceptModelCondition=""
 					RejectModelCondition="" />
 			</SpecialPower>
-			<BeamSpecialAbilityUpdate
-				id="36AEB473"
+			<GiveOrRestoreUpgradeSpecialPower
+				id="596013F6"
 				GrabPassengerHealGain="0%"
-				SpecialPowerTemplate="NODBeamCannonLaserSpecialPower"
-				StartAbilityRange="610"
-				AbilityAbortRange="610"
-				PreparationTime="10000s"
-				PersistentPrepTime="0s"
-				PersistentCount="-1"
-				PackTime="0.1s"
-				UnpackTime="1s"
-				PreTriggerUnstealthTime="0s"
-				Options="UPDATE_REQUIRES_LINE_OF_SIGHT"
-				PackUnpackVariationFactor="0"
-				ParalyzeDurationWhenCompleted="0s"
-				ParalyzeDurationWhenAborted="0s"
-				SpecialObject=""
-				MaxSpecialObjects="1"
-				EffectDuration="0s"
-				EffectValue="1"
-				EffectRange="0"
-				FleeRangeAfterCompletion="0"
-				DisableFXParticleSystem=""
-				PackSound=""
-				UnpackSound="AudioEvent:NOD_BeamCannon_BeamWeaponPowerUpSwell"
-				PrepSoundLoop="Multisound:NOD_BeamCannon_BeamWeaponLoopMS"
-				TriggerSound=""
-				ActiveLoopSound=""
-				AwardXPForTriggering="0"
-				SkillPointsForTriggering="-1"
-				UnpackingVariation="0"
-				FreezeAfterTriggerDuration="0s"
-				RequiredConditions=""
-				RejectedConditions=""
-				SetObjectStatusOnTrigger="IS_ENGAGED"
-				ClearObjectStatusOnExit="IS_ENGAGED"
-				TriggerAttributeModifier=""
-				AttributeModifierDuration="0s"
-				ChainedButton=""
-				RequireAndSpendTiberiumOnCaster="0"
-				DisabledTypesToProcess="HELD"
-				DisabledTypesToContinueSoundsFor="HELD"
-				StartRechargeOnExit="False"
-				GoIdleInStartPreparation="True"
-				FaceTarget="True"
-				DamagePerSecond="150"
-				TargetAttributeModifierAdd=""
-				SweepFX=""
-				ReflectorExtendDistance="0"
-				JoinWithOtherBeams="True"
-				DissapateWhenTargetDead="True"
-				LineType="False"
-				TargetSamePlayerOnly="False" />
-			<SpecialPower
-				id="6540F6F9"
-				SpecialPowerTemplate="SpecialPower_ChargeDefensesTrigger"
-				AntiCategory=""
-				AntiFX=""
-				AttributeModifier=""
-				AttributeModifierRange="0"
-				AttributeModifierFX=""
-				WeatherDuration="0"
-				InitiateFX=""
-				TriggerFX=""
-				SetModelCondition="TOPPLED"
-				SetModelConditionTime="0s"
-				GiveLevels="0"
-				ChangeWeather="NORMAL"
-				OnTriggerRechargeSpecialPower=""
-				BurnDecayModifier="0"
-				MaxDistanceFromCommandCenter="0"
-				UpdateModuleStartsAttack="True"
-				StartsPaused="False"
-				ReEnableAntiCategory="False"
-				AttributeModifierAffectsSelf="False"
-				AttributeModifierWeatherBased="False"
-				TargetEnemy="False"
-				TargetAllSides="False"
-				DisableDuringAnimDuration="False"
-				IdleWhenStartingPower="False"
-				AffectGood="False"
-				AffectEvil="False"
-				AffectAllies="True"
-				AvailableAtStart="True"
-				AdjustVictim="False"
-				UseDistanceFromCommandCenter="False"
-				ChildModuleHandlesFX="False">
-				<AttributeModifierAffects
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterMP
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterStrategic
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-			</SpecialPower>
-			<BeamSpecialAbilityUpdate
-				id="3216CCB9"
-				GrabPassengerHealGain="0%"
-				SpecialPowerTemplate="SpecialPower_ChargeDefensesTrigger"
-				StartAbilityRange="200"
+				SpecialPowerTemplate="SpecialPower_GrantUnpackUpgrade"
+				StartAbilityRange="1E+07"
 				AbilityAbortRange="1E+07"
-				PreparationTime="10000s"
+				PreparationTime="0s"
 				PersistentPrepTime="0s"
 				PersistentCount="-1"
-				PackTime="1s"
-				UnpackTime="2s"
-				PreTriggerUnstealthTime="0s"
-				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE"
-				PackUnpackVariationFactor="0"
-				ParalyzeDurationWhenCompleted="0s"
-				ParalyzeDurationWhenAborted="0s"
-				SpecialObject=""
-				MaxSpecialObjects="1"
-				EffectDuration="0s"
-				EffectValue="1"
-				EffectRange="0"
-				FleeRangeAfterCompletion="0"
-				DisableFXParticleSystem=""
-				PackSound=""
-				UnpackSound="AudioEvent:NOD_BeamCannon_BeamWeaponPowerUpSwell"
-				PrepSoundLoop="Multisound:NOD_BeamCannon_ChargeObeliskLoopMS"
-				TriggerSound=""
-				ActiveLoopSound=""
-				AwardXPForTriggering="0"
-				SkillPointsForTriggering="-1"
-				UnpackingVariation="0"
-				FreezeAfterTriggerDuration="0s"
-				RequiredConditions=""
-				RejectedConditions=""
-				SetObjectStatusOnTrigger=""
-				ClearObjectStatusOnExit=""
-				TriggerAttributeModifier=""
-				AttributeModifierDuration="0s"
-				ChainedButton=""
-				RequireAndSpendTiberiumOnCaster="0"
-				DisabledTypesToProcess="HELD"
-				DisabledTypesToContinueSoundsFor="HELD"
-				StartRechargeOnExit="False"
-				GoIdleInStartPreparation="True"
-				FaceTarget="True"
-				DamagePerSecond="0"
-				TargetAttributeModifierAdd="AttributeModifier_ChargeDefenses"
-				SweepFX=""
-				ReflectorExtendDistance="0"
-				PreferredTargetBone="FXBONE01"
-				JoinWithOtherBeams="False"
-				DissapateWhenTargetDead="True"
-				LineType="False"
-				TargetSamePlayerOnly="False" />
-			<SpecialPower
-				id="A0B2B001"
-				SpecialPowerTemplate="SpecialPower_ReflectorAttack"
-				AntiCategory=""
-				AntiFX=""
-				AttributeModifier=""
-				AttributeModifierRange="0"
-				AttributeModifierFX=""
-				WeatherDuration="0"
-				InitiateFX=""
-				TriggerFX=""
-				SetModelCondition="TOPPLED"
-				SetModelConditionTime="0s"
-				GiveLevels="0"
-				ChangeWeather="NORMAL"
-				OnTriggerRechargeSpecialPower=""
-				BurnDecayModifier="0"
-				MaxDistanceFromCommandCenter="0"
-				UpdateModuleStartsAttack="True"
-				StartsPaused="False"
-				ReEnableAntiCategory="False"
-				AttributeModifierAffectsSelf="False"
-				AttributeModifierWeatherBased="False"
-				TargetEnemy="False"
-				TargetAllSides="False"
-				DisableDuringAnimDuration="False"
-				IdleWhenStartingPower="False"
-				AffectGood="False"
-				AffectEvil="False"
-				AffectAllies="True"
-				AvailableAtStart="True"
-				AdjustVictim="False"
-				UseDistanceFromCommandCenter="False"
-				ChildModuleHandlesFX="False">
-				<AttributeModifierAffects
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterMP
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterStrategic
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-			</SpecialPower>
-			<BeamSpecialAbilityUpdate
-				id="7E53E03E"
-				GrabPassengerHealGain="0%"
-				SpecialPowerTemplate="SpecialPower_ReflectorAttack"
-				StartAbilityRange="10000"
-				AbilityAbortRange="1E+07"
-				PreparationTime="10000s"
-				PersistentPrepTime="0s"
-				PersistentCount="-1"
-				PackTime="0.1s"
-				UnpackTime="2s"
+				PackTime="0s"
+				UnpackTime="0s"
 				PreTriggerUnstealthTime="0s"
 				Options=""
 				PackUnpackVariationFactor="0"
@@ -1116,8 +558,8 @@
 				FleeRangeAfterCompletion="0"
 				DisableFXParticleSystem=""
 				PackSound=""
-				UnpackSound="AudioEvent:NOD_BeamCannon_BeamWeaponPowerUpSwell"
-				PrepSoundLoop="Multisound:NOD_BeamCannon_BeamWeaponLoopMS"
+				UnpackSound=""
+				PrepSoundLoop=""
 				TriggerSound=""
 				ActiveLoopSound=""
 				AwardXPForTriggering="0"
@@ -1135,25 +577,32 @@
 				DisabledTypesToProcess="HELD"
 				DisabledTypesToContinueSoundsFor="HELD"
 				StartRechargeOnExit="False"
-				GoIdleInStartPreparation="False"
+				GoIdleInStartPreparation="True"
 				FaceTarget="True"
-				DamagePerSecond="150"
-				TargetAttributeModifierAdd=""
-				SweepFX=""
-				ReflectorExtendDistance="500"
-				JoinWithOtherBeams="True"
-				DissapateWhenTargetDead="True"
-				LineType="False"
-				TargetSamePlayerOnly="False" />
+				UpgradeToGive="Upgrade_UnPack"
+				WeaponFlags="" />
+			<ReplaceSelfUpgrade
+				id="FC1FA9EE"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				NewObjectUnpackTime="30s"
+				DisabledDuringUnpack="True"
+				CheckBuildAssistant="True">
+				<TriggeredBy>Upgrade_UnPack</TriggeredBy>
+				<ReplacementTemplate>NODMiniMCVOutpost</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
 			<AISpecialPowerUpdate
-				id="16F50DB7"
-				CommandButtonName="Command_ReflectorAttack"
+				id="4BF569F2"
+				CommandButtonName="Command_UnPackEmissary"
 				SecondaryCommandButtonName=""
-				SpecialPowerAIType="SPECIAL_POWER_SPECIFIC_UNIT"
-				SpecialPowerRadius="200"
+				SpecialPowerAIType="SPECIAL_POWER_BUILD_CONYARD"
+				SpecialPowerRadius="-1"
 				ReinforceDistance="0"
 				SpellMakesAStructure=""
-				SpecificUnit="NODVenom"
+				SpecificUnit=""
 				UnitKindOf=""
 				AllyUnitInclude=""
 				AllyUnitExclude=""
@@ -1238,18 +687,24 @@
 					y="0"
 					z="0" />
 			</CreateAndEnterObjectSpecialPower>
-			<StatusBitsUpgrade
-				id="D305500E"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="WEAPON_UPGRADED_03"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
-			</StatusBitsUpgrade>
+			<AISpecialPowerUpdate
+				id="28F202D6"
+				CommandButtonName="Command_NodCallForTransportVehicle"
+				SecondaryCommandButtonName=""
+				SpecialPowerAIType="SPECIAL_POWER_MOVEMENT"
+				SpecialPowerRadius="-1"
+				ReinforceDistance="0"
+				SpellMakesAStructure=""
+				SpecificUnit=""
+				UnitKindOf=""
+				AllyUnitInclude=""
+				AllyUnitExclude=""
+				EnemyUnitInclude=""
+				EnemyUnitExclude=""
+				MinimumCutoff="5000"
+				UpdateTime="5s"
+				MaxFrequency="0"
+				RandomizeTargetLocation="False" />
 		</Behaviors>
 		<AI>
 			<AIUpdate
@@ -1270,23 +725,12 @@
 				StandGround="False"
 				CanAttackWhileContained="False"
 				RampageRequiresAflame="False"
-				FadeOnPortals="False">
-				<UnitAITargetChooserData
-					IdleScanDelay="0.8s"
-					ReacquireDelay="5s"
-					StartupDelay="0s"
-					SympathyRange="100"
-					CheckVisionRange="False"
-					CanPickDynamicTargets="False"
-					RotateToTargetWhenAiming="False"
-					CanAutoAcquireNonAutoAcquirable="False"
-					TargetingCompareList="DefaultTargetingCompareList" />
-			</AIUpdate>
+				FadeOnPortals="False" />
 		</AI>
 		<Body>
 			<ActiveBody
-				id="B313F576"
-				MaxHealth="3000"
+				id="A5C3EB8A"
+				MaxHealth="2000"
 				MaxHealthDamaged="0"
 				MaxHealthReallyDamaged="0"
 				InitialHealth="-1"
@@ -1311,7 +755,7 @@
 			IsSmall="True">
 			<Shape
 				Type="BOX"
-				ContactPointGeneration="VEHICLE"
+				ContactPointGeneration="NONE"
 				MajorRadius="14"
 				MinorRadius="7"
 				Height="11.5"
@@ -1321,45 +765,24 @@
 		</Geometry>
 		<AudioArrayVoice>
 			<AudioEntry
-				Sound="AudioEvent:NOD_BeamCannon_VoiceAttack"
-				AudioType="voiceAttack" />
-			<AudioEntry
-				Sound="AudioEvent:EmptyVoiceResponse"
-				AudioType="voiceBombard" />
-			<AudioEntry
-				Sound="AudioEvent:NOD_BeamCannon_VoiceCreate"
+				Sound="AudioEvent:NOD_Emissary_VoiceCreate"
 				AudioType="voiceCreated" />
 			<AudioEntry
-				Sound="AudioEvent:NOD_BeamCannon_VoiceMove"
-				AudioType="voiceGuard" />
-			<AudioEntry
-				Sound="AudioEvent:NOD_BeamCannon_VoiceMove"
+				Sound="AudioEvent:NOD_Emissary_VoiceMove"
 				AudioType="voiceMove" />
 			<AudioEntry
-				Sound="AudioEvent:NOD_BeamCannon_VoiceMoveAttack"
-				AudioType="voiceAttackAfterMoving" />
-			<AudioEntry
-				Sound="AudioEvent:NOD_BeamCannon_VoiceRetreat"
+				Sound="AudioEvent:NOD_Emissary_VoiceRetreat"
 				AudioType="voiceRetreatToCastle" />
 			<AudioEntry
-				Sound="Multisound:NOD_BeamCannon_VoiceSelectMS"
+				Sound="Multisound:NOD_Emissary_VoiceSelectMS"
 				AudioType="voiceSelect" />
-			<AudioEntry
-				Sound="Multisound:NOD_BeamCannon_VoiceSelectBattleMS"
-				AudioType="voiceSelectBattle" />
-			<NamedEntry
-				Sound="AudioEvent:NOD_BeamCannon_VoiceAttackSpottedTarget"
-				Name="InitiateReflectorAttackHighlight" />
-			<NamedEntry
-				Sound="AudioEvent:NOD_BeamCannon_VoiceChargeDefenses"
-				Name="InitiateChargeDefensesTrigger" />
 		</AudioArrayVoice>
 		<AudioArraySound>
 			<AudioEntry
-				Sound="AudioEvent:NOD_BeamCannon_MoveStart"
+				Sound="AudioEvent:NOD_Emissary_MoveStart"
 				AudioType="soundMoveStart" />
 			<AudioEntry
-				Sound="AudioEvent:NOD_BeamCannon_IdleLoop"
+				Sound="AudioEvent:NOD_Emissary_IdleLoop"
 				AudioType="soundAmbient" />
 		</AudioArraySound>
 		<EvaEvents
@@ -1397,8 +820,8 @@
 			IsRotatingWithObject="True"
 			LocalPlayerOnly="False" />
 		<VisionInfo
-			VisionRange="600"
-			ShroudClearingRange="400"
+			VisionRange="100"
+			ShroudClearingRange="200"
 			VisionSide="100%"
 			VisionRear="100%"
 			VisionBonusTestRadius="100"
@@ -1413,11 +836,11 @@
 			CrushDecelerationPercent="0%"
 			CrushWeapon=""
 			CrushRevengeWeapon=""
-			CrusherLevel="0"
+			CrusherLevel="1"
 			CrushableLevel="2"
 			MountedCrusherLevel="255"
 			MountedCrushableLevel="255"
-			CrushEqualLevelProps="True"
+			CrushEqualLevelProps="False"
 			UseCrushAttack="True"
 			CrushOnlyWhileCharging="False"
 			CrushAllies="False" />

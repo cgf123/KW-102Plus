@@ -8,8 +8,7 @@
 		<Include type="reference" source="static.xml" />-->
 
 		<!-- ======================== GLOBALS ======================= -->	
-		<Include type="all" source="Experience.xml" />
-		<Include type="all" source="NODEMPBlastProjectile1.xml" />			
+		<Include type="all" source="Experience.xml" />	
 		<Include type="all" source="Weapon.xml" />
 		<Include type="all" source="SpecialPowerTemplates.xml" /> 									
 		<Include type="all" source="OCL.xml" />
@@ -22,21 +21,32 @@
 		<Include type="all" source="Sounds.xml" />	
 
 		<!-- ============================== ART ========================== -->
-		<Include type="all" source="GBBTLEBASE.UGRAILMAIN.w3x" />		
-		<Include type="all" source="GBBTLEBASE.UG_RAILBARREL1.w3x" />
-		<Include type="all" source="GBBTLEBASE.UGRAILACCELERATORMAIN.w3x" />		
-		<Include type="all" source="GBBTLEBASE.UG_RAILACCELERATORBARREL1.w3x" />	
-		<Include type="all" source="GBBTLEBASE1_CTR.w3x" />			
-		<Include type="all" source="GBBTLEBASE1_HRC.w3x" />					
+		<Include type="all" source="art/gbbtlebase/GBBTLEBASE.UGRAILMAIN.w3x" />		
+		<Include type="all" source="art/gbbtlebase/GBBTLEBASE.UG_RAILBARREL1.w3x" />
+		<Include type="all" source="art/gbbtlebase/GBBTLEBASE.UGRAILACCELERATORMAIN.w3x" />		
+		<Include type="all" source="art/gbbtlebase/GBBTLEBASE.UG_RAILACCELERATORBARREL1.w3x" />	
+		<Include type="all" source="art/gbbtlebase/GBBTLEBASE1_CTR.w3x" />			
+		<Include type="all" source="art/gbbtlebase/GBBTLEBASE1_HRC.w3x" />	
+
+		<Include type="all" source="art/abtpbone/ABTPBONE.OBBOX01.w3x" />	
+		<Include type="all" source="art/abtpbone/ABTPBONE_CTR.w3x" />	
+		<Include type="all" source="art/abtpbone/ABTPBONE_HRC.w3x" />			
 
 		<!-- =========================== NEUTRALS/COMMON ========================= -->				
 		<Include type="all" source="TibFieldHarv.xml" />					
 		<Include type="all" source="AirSupports.xml" />				
 		<Include type="all" source="RDrones.xml" />		
 		
+		<Include type="all" source="MutantMarauder.xml" />			
+		<Include type="all" source="MutantMarauderSquad.xml" />					
+		
 		<!-- =========================== GDI ========================= -->					
 
 		<Include type="all" source="RigBattlebase.xml" />
+		
+		<Include type="all" source="GDISurveyor.xml" /> 		
+		<Include type="all" source="STSurveyor.xml" /> 		
+		<Include type="all" source="ZOCOMSurveyor.xml" /> 			
 		
 		<Include type="all" source="GDIRifleSoldierSquads.xml" />
 		<Include type="all" source="ZOCOMRifleSoldierSquads.xml" />
@@ -46,6 +56,7 @@
 		<Include type="all" source="ZOCOMMissileSoldierSquads.xml" />
 		<Include type="all" source="STMissileSoldierSquads.xml" />
 
+		<Include type="all" source="GDIGrenadeSoldierEMPGrenadeProjectile.xml" />
 		<Include type="all" source="Grenadiers.xml" />			
 		
 		<Include type="all" source="GDIGrenadierSquad.xml" />
@@ -100,7 +111,9 @@
 		<Include type="all" source="ZOCOMV35Ox_BloodhoundAPC.xml" />	
 		<Include type="all" source="ZOCOMV35Ox_HunterKiller.xml" />	
 		<Include type="all" source="ZOCOMV35Ox_Airborne.xml" />	
-		<Include type="all" source="ZOCOMV35Ox_AirborneRockets.xml" />			
+		<Include type="all" source="ZOCOMV35Ox_AirborneRockets.xml" />		
+
+		<Include type="all" source="ZOCOMIonCannonControl.xml" />			
 
 		<Include type="all" source="Slingshots.xml" />					
 					
@@ -111,6 +124,8 @@
 		
 		<!-- =========================== SCRIN ========================= -->					
 
+		<Include type="all" source="MothershipEffects.xml" />	
+
 		<Include type="all" source="AlienRef.xml" />	
 		<Include type="all" source="R17Ref.xml" />	
 		<Include type="all" source="T59Ref.xml" />			
@@ -119,12 +134,16 @@
 		<Include type="all" source="R17ControlCenter.xml" />	
 		<Include type="all" source="T59ControlCenter.xml" />			
 		
+		<Include type="all" source="AlienTibHive.xml" />			
+		
 		<Include type="all" source="TibScanDummy.xml" />			
 
 		<Include type="all" source="AlienBuzzers_Slaved.xml" />	
 			
 		<Include type="all" source="Ravagers.xml" />		
 		<Include type="all" source="T59RazorDrones.xml" />
+		
+		<Include type="all" source="AlienTibAgitationProjectile.xml" />
 				
 		<Include type="all" source="RazorDroneSquads.xml" />
 		<Include type="all" source="ShocktrooperSquads.xml" />
@@ -162,6 +181,10 @@
 		<Include type="all" source="NODRef.xml" />	
 		<Include type="all" source="BHRef.xml" />	
 		<Include type="all" source="MOKRef.xml" />				
+		
+		<Include type="all" source="NODEmissary.xml" /> 		
+		<Include type="all" source="MOKEmissary.xml" /> 		
+		<Include type="all" source="BHEmissary.xml" /> 				
 
 		<Include type="all" source="OperationCenters.xml" />						
 		
@@ -219,6 +242,8 @@
 		<Include type="all" source="NodTempleOfNod.xml" />		
 		<Include type="all" source="BHTempleOfNod.xml" />		
 		<Include type="all" source="MOKTempleOfNod.xml" />				
+		
+		<Include type="all" source="NODEMPBlastProjectile1.xml" />				
 		
 		<Include type="all" source="MOKEnlightened.xml" />	
 		<Include type="all" source="MOKEnlightenedSquad.xml" />		

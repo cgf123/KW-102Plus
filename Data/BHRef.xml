@@ -68,7 +68,7 @@
 		ReinvisibilityDelay="4s"
 		CaptureTime="0s"
 		BuildCost="3000"
-		RefundValue="500"
+		RefundValue="700"
 		ThreatValue="0"
 		MaxSimultaneousOfType="0"
 		TransportSlotCount="1"

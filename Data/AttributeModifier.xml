@@ -30,5 +30,186 @@
 		<Modifier Type="SPEED" Value="185%"/>
 	</AttributeModifier>
 	
+	<AttributeModifier
+		id="AttributeModifier_TransportEmpty"
+		Category="INNATE_VISION">
+		<Modifier
+			Type="SHROUD_CLEARING"
+			Value="0%" />
+	</AttributeModifier>		
+	
+	<!-- ######################################## HANDICAPS ####################################### -->
+	<!-- NOTE: PRODUCTION buff to cancel out BuildTime Multiplier in INI -->
+
+	<AttributeModifier
+		id="HandicapPercent5"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="105%" />			
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent10"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="110%" />			
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent15"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="115%" />			
+	</AttributeModifier>
+	
+	<AttributeModifier
+		id="HandicapPercent20"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="120%" />			
+	</AttributeModifier>	
+	
+	<AttributeModifier
+		id="HandicapPercent25"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="125%" />			
+	</AttributeModifier>		
+
+	<AttributeModifier
+		id="HandicapPercent30"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="130%" />			
+	</AttributeModifier>		
+
+	<AttributeModifier
+		id="HandicapPercent35"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="135%" />			
+	</AttributeModifier>		
+
+	<AttributeModifier
+		id="HandicapPercent40"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="140%" />			
+	</AttributeModifier>		
+
+	<AttributeModifier
+		id="HandicapPercent45"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="145%" />			
+	</AttributeModifier>		
+
+	<AttributeModifier
+		id="HandicapPercent50"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="150%" />			
+	</AttributeModifier>	
+
+	<AttributeModifier
+		id="HandicapPercent55"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="155%" />			
+	</AttributeModifier>		
+	
+	<AttributeModifier
+		id="HandicapPercent60"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="160%" />			
+	</AttributeModifier>		
+	
+	<AttributeModifier
+		id="HandicapPercent65"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="165%" />			
+	</AttributeModifier>		
+	
+	<AttributeModifier
+		id="HandicapPercent70"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="170%" />			
+	</AttributeModifier>		
+	
+	<AttributeModifier
+		id="HandicapPercent75"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="175%" />			
+	</AttributeModifier>		
+	
+	<AttributeModifier
+		id="HandicapPercent80"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="180%" />			
+	</AttributeModifier>	
+
+	<AttributeModifier
+		id="HandicapPercent85"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="185%" />			
+	</AttributeModifier>		
+	
+	<AttributeModifier
+		id="HandicapPercent90"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="HEALTH_MULT" Value="100%"/>
+		<Modifier Type="PRODUCTION" Value="190%" />			
+	</AttributeModifier>		
+	
+	<!-- FUN MODE -->
+	<AttributeModifier
+		id="HandicapPercent95"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="RECHARGE_TIME" Value="20%" />
+		<Modifier Type="PRODUCTION" Value="4000%" />			
+	</AttributeModifier>		
 	
 </AssetDeclaration>

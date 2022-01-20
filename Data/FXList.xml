@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="us-ascii" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Tags />
+	<Includes>
+	</Includes>
+
+	<FXList id="FX_ManipulateStart">
+		<NuggetList>
+			<Sound Value="AudioEvent:ALI_MasterMind_ManipulateStart" />						
+		</NuggetList>
+	</FXList>	
+
+</AssetDeclaration>	

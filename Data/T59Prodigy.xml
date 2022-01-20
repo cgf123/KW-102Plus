@@ -1065,7 +1065,7 @@
 				AttributeModifierRange="0"
 				AttributeModifierFX=""
 				WeatherDuration="0"
-				InitiateFX=""
+				InitiateFX="FX_ManipulateStart"
 				TriggerFX=""
 				SetModelCondition="TOPPLED"
 				SetModelConditionTime="0s"

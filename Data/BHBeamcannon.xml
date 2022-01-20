@@ -472,7 +472,7 @@
 			<!-- REFLECTORZ !! -->
 			<PassiveAreaEffectBehavior
 				id="ModuleTag_BeamDummy"
-				EffectRadius="525"
+				EffectRadius="625"
 				HealingPercentPerSecond="0"
 				SurveyDelayFrames="2"
 				NonStackable="True" >

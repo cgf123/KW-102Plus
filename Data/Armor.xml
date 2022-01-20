@@ -62,7 +62,7 @@
 			Percent="75" />
 	</ArmorTemplate>	
 	
-		<ArmorTemplate
+	<ArmorTemplate
 		id="SteelTalonsTitanArmor"
 		SideDamageScalar="110"
 		RearDamageScalar="120">
@@ -119,6 +119,25 @@
 		<Armor
 			Damage="SNIPER"
 			Percent="75"/>
+	</ArmorTemplate>	
+	
+	<ArmorTemplate
+		id="NODSaboteurArmor">
+		<Armor
+			Damage="CANNON"
+			Percent="25" />
+		<Armor
+			Damage="ROCKET"
+			Percent="25" />
+		<Armor
+			Damage="GRENADE"
+			Percent="75" />
+		<Armor
+			Damage="GUN"
+			Percent="100" />
+		<Armor
+			Damage="SNIPER"
+			Percent="100"/>
 	</ArmorTemplate>	
 
 	<ArmorTemplate

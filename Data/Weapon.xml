@@ -466,7 +466,7 @@
 		id="AlienStalkerTiberiumAgitation"
 		Name="AlienStalkerTiberiumAgitation"
 		AttackRange="500.0"
-		WeaponSpeed="400.0"
+		WeaponSpeed="999999.0"
 		FireFX="FX_AlienTibAgitationFire"
 		MinWeaponSpeed="999999.0"
 		MaxWeaponSpeed="999999.0"
@@ -486,7 +486,7 @@
 		id="AlienStalkerTiberiumAgitation1"
 		Name="AlienStalkerTiberiumAgitation1"
 		AttackRange="500.0"
-		WeaponSpeed="400.0"
+		WeaponSpeed="999999.0"
 		FireFX="FX_AlienTibAgitationFire"
 		MinWeaponSpeed="999999.0"
 		MaxWeaponSpeed="999999.0"
@@ -520,6 +520,17 @@
 						Rule="ANY"
 						Include="FS_MONEY_STORAGE"/>
 				</DamageScalarDetails>
+				<!-- Reduced damage vs Scrin units -->
+				<DamageScalarDetails Scalar="50%">
+					<IncludeThing>Reaper17AnnihilatorTripod</IncludeThing>				
+					<IncludeThing>AlienDevourerTank</IncludeThing>
+					<IncludeThing>Reaper17DevourerTank</IncludeThing>			
+					<IncludeThing>Reaper17Corrupter</IncludeThing>
+					<IncludeThing>Traveler59Corrupter</IncludeThing>
+					<IncludeThing>AlienCorrupter</IncludeThing>	
+					<IncludeThing>AlienMillipedeHead</IncludeThing>
+					<IncludeThing>AlienMillipedeBody</IncludeThing>					
+				</DamageScalarDetails>				
 			</DamageNugget>
 		</Nuggets>
 	</WeaponTemplate>	

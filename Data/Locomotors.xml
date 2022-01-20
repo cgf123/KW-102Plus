@@ -1151,7 +1151,7 @@
 			
 		TakeOffAndLandingSpeed="6.0"
 		TakeOffAndLandingSlowDownDelta="35.0"
-		TakeOffAndLandingSlowDownTime="1.5s"
+		TakeOffAndLandingSlowDownTime="1.0s"
 
 		RudderCorrectionDegree="0.169"
 		RudderCorrectionRate="0.027"
@@ -1189,7 +1189,7 @@
 			
 		TakeOffAndLandingSpeed="6.0"
 		TakeOffAndLandingSlowDownDelta="35.0"
-		TakeOffAndLandingSlowDownTime="1.5s"
+		TakeOffAndLandingSlowDownTime="1.0s"
 
 		RudderCorrectionDegree="0.169"
 		RudderCorrectionRate="0.027"
@@ -1229,7 +1229,7 @@
 			
 		TakeOffAndLandingSpeed="6.0"
 		TakeOffAndLandingSlowDownDelta="35.0"
-		TakeOffAndLandingSlowDownTime="1.5s"
+		TakeOffAndLandingSlowDownTime="1.0s"
 
 		RudderCorrectionDegree="0.169"
 		RudderCorrectionRate="0.027"

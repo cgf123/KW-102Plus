@@ -36,6 +36,30 @@
 			ForbiddenModelConditions="LANDING TAKING_OFF" />
 	</SpecialPowerTemplate>	
 
+	<SpecialPowerTemplate
+		id="SpecialPower_ReflectorAttack"
+		Flags="LIMIT_DISTANCE FIND_REACHABLE_TARGETS NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		TargetType="OBJECT"
+		RequiredTargetObjectStatus="CONTESTED"
+		MinCastRange="100"
+		MaxCastRange="50000"
+		RequiredConditions=""
+		WaypointModeTerminal="false"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice=""
+		ReachableTargetsCircleDisplayRadius="500">
+		<ObjectFilter
+			Relationship="ENEMIES"
+			Rule="ALL" />
+		<GameDependency>
+			<ObjectFilter
+				Rule="ANY"
+				Relationship="ALLIES">
+				<IncludeThing>NODVenom</IncludeThing>
+				<IncludeThing>MarkedOfKaneVenom</IncludeThing>
+				<IncludeThing>BlackHandVenom</IncludeThing>
+			</ObjectFilter>
+		</GameDependency>
+	</SpecialPowerTemplate>	
 
 	<!-- CLONE FILTER FIXES -->
 	<SpecialPowerTemplate

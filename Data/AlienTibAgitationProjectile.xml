@@ -40,7 +40,7 @@
 				FirstHeightMax="10"
 				SecondHeightMin="0"
 				SecondHeightMax="10"
-				CurveFlattenMinDist="300">				
+				CurveFlattenMinDist="30000">				
 			</BezierProjectile>
 		</Behaviors>
 		<Body>
@@ -98,7 +98,7 @@
 				FirstHeightMax="10"
 				SecondHeightMin="0"
 				SecondHeightMax="10"
-				CurveFlattenMinDist="300">				
+				CurveFlattenMinDist="30000">				
 			</BezierProjectile>
 		</Behaviors>
 		<Body>

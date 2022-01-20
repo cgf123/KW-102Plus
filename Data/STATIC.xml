@@ -19,6 +19,7 @@
 		<Include type="all" source="LogicCommand.xml" />					
 		<Include type="all" source="Particles.xml" />	
 		<Include type="all" source="Sounds.xml" />	
+		<Include type="all" source="FXList.xml" />				
 
 		<!-- ============================== ART ========================== -->
 		<Include type="all" source="art/gbbtlebase/GBBTLEBASE.UGRAILMAIN.w3x" />		
@@ -41,6 +42,10 @@
 		<Include type="all" source="MutantMarauderSquad.xml" />					
 		
 		<!-- =========================== GDI ========================= -->					
+
+		<Include type="all" source="GDIRef.xml" />	
+		<Include type="all" source="STRef.xml" />	
+		<Include type="all" source="ZOCOMRef.xml" />		
 
 		<Include type="all" source="RigBattlebase.xml" />
 		
@@ -92,7 +97,9 @@
 
 		<Include type="all" source="GDIHammerhead.xml" /> 				
 		<Include type="all" source="STHammerhead.xml" />
-		<Include type="all" source="ZOCOMHammerhead.xml" />					
+		<Include type="all" source="ZOCOMHammerhead.xml" />			
+
+		<Include type="all" source="GDIHammerheadDebris_06.xml" />					
 
 		<Include type="all" source="GDIZoneInf.xml" />	
 		<Include type="all" source="STZoneInf.xml" />				
@@ -214,7 +221,11 @@
 
 		<Include type="all" source="BHPurifier.xml" /> 			
 		<Include type="all" source="Avatars.xml" />			
-		<Include type="all" source="AvatarHusk.xml" />				
+		<Include type="all" source="AvatarHusk.xml" />		
+
+		<Include type="all" source="NODBeamcannon.xml" />				
+		<Include type="all" source="MOKBeamcannon.xml" />				
+		<Include type="all" source="BHBeamcannon.xml" />						
 
 		<Include type="all" source="Shadows.xml" />		
 		<Include type="all" source="NODShadowSquad.xml" />		

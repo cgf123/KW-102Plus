@@ -1400,7 +1400,7 @@
 			LocalPlayerOnly="False" />
 		<VisionInfo
 			VisionRange="600"
-			ShroudClearingRange="400"
+			ShroudClearingRange="300"
 			VisionSide="100%"
 			VisionRear="100%"
 			VisionBonusTestRadius="100"

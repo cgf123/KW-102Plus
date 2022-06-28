@@ -36,7 +36,22 @@
 		<Modifier
 			Type="SHROUD_CLEARING"
 			Value="0%" />
+	</AttributeModifier>
+
+	<!-- ObjectStatus broadcasted from Beamcannons to nearby Venoms, and thereafter from Venoms to nearby Venoms -->
+	<AttributeModifier
+		id="AttributeModifier_BeamDummy"
+		Duration="0.5s"
+		ObjectStatusToSet="GRAB_AND_DROP"
+		Category="NONE">
 	</AttributeModifier>		
+	<!-- ObjectStatus set on potential enemy targets within Venom's reflector range -->
+	<AttributeModifier
+		id="AttributeModifier_BeamDummy1"
+		Duration="0.5s"
+		ObjectStatusToSet="CONTESTED"
+		Category="NONE">
+	</AttributeModifier>			
 	
 	<!-- ######################################## HANDICAPS ####################################### -->
 	<!-- NOTE: PRODUCTION buff to cancel out BuildTime Multiplier in INI -->

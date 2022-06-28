@@ -193,6 +193,9 @@
 		<Include type="all" source="MOKEmissary.xml" /> 		
 		<Include type="all" source="BHEmissary.xml" /> 				
 
+		<Include type="all" source="MOKMCV.xml" /> 		
+		<Include type="all" source="BHMCV.xml" /> 		
+
 		<Include type="all" source="OperationCenters.xml" />						
 		
 		<Include type="all" source="NODMilitantSquad.xml" />
